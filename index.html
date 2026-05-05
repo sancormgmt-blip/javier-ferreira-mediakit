@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#0f0c0a">
 <title>Javier Ferreira — Brand Media Kit 2026</title>
-<meta name="description" content="Javier Ferreira — Editorial talent. Already wears Rabanne, JPG, Carolina Herrera. 3.9M TikTok · 455K Instagram. Available for Paris Fashion Week & Bogotá Fashion Week 2026.">
+<meta name="description" content="Javier Ferreira — Editorial talent. Wears Rabanne · Jean Paul Gaultier · Carolina Herrera · Diesel. Available for Paris Fashion Week & Bogotá Fashion Week 2026.">
 <meta property="og:title" content="Javier Ferreira — Brand Media Kit 2026">
-<meta property="og:description" content="Already wears Rabanne · JPG · Carolina Herrera · Diesel. 3.9M digital audience meets fashion's front row.">
+<meta property="og:description" content="Wears Rabanne · JPG · Carolina Herrera · Diesel. 3.9M-strong digital audience meets fashion's front row.">
 <meta property="og:type" content="profile">
 <meta property="og:image" content="assets/foto1.jpg">
 <meta property="og:image:width" content="800">
@@ -19,21 +19,22 @@
 <link rel="preload" as="video" href="assets/hero_jpg.mp4" type="video/mp4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
-  --bg:#0a0a0a;
-  --bg-2:#111;
-  --surface:#161616;
-  --line:rgba(255,255,255,.08);
-  --line-2:rgba(255,255,255,.16);
-  --text:#e8e8e6;
-  --text-soft:#a8a8a6;
-  --text-muted:#6e6e6c;
+  /* Warm editorial black */
+  --bg:#0f0c0a;
+  --bg-2:#13100c;
+  --surface:#16110e;
+  --line:rgba(255,253,247,.08);
+  --line-2:rgba(255,253,247,.16);
+  --text:#e8e6e0;
+  --text-soft:#a8a59c;
+  --text-muted:#6e6a60;
   --white:#fffff5;
-  --gris:#b9bfc4;
-  --rojo:#e81e1e;
+  --gris:#c4bdb0;
+  --rojo:#c8332e;
 }
 html{scroll-behavior:smooth;background:var(--bg);-webkit-text-size-adjust:100%}
 body{
@@ -42,7 +43,16 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
   overflow-x:hidden;
+  position:relative;
 }
+
+/* ═══ Film grain overlay (editorial texture) ═══ */
+body::before{
+  content:'';position:fixed;inset:0;z-index:200;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:.4;mix-blend-mode:overlay;
+}
+
 img,picture,video{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
@@ -53,23 +63,48 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
 
 /* Type utilities */
 .serif{font-family:'Playfair Display',Georgia,serif}
-.mono{font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:.18em}
+.italic{font-style:italic}
 
-/* ═══ Lang toggle ═══ */
+/* ═══ Lang toggle (square, editorial) ═══ */
 .lang-toggle{
-  position:fixed;top:14px;right:14px;z-index:100;
-  width:54px;height:32px;border:1px solid var(--line-2);border-radius:32px;
+  position:fixed;top:18px;right:18px;z-index:100;
+  width:auto;height:28px;border:1px solid var(--line-2);
   display:flex;align-items:center;justify-content:center;
-  font-size:10px;letter-spacing:.2em;color:var(--gris);
-  background:rgba(10,10,10,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  font-weight:500;
+  font-size:9.5px;letter-spacing:.32em;color:var(--gris);
+  background:rgba(15,12,10,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  font-weight:500;padding:0 14px;
+  text-transform:uppercase;
 }
 .lang-toggle:hover{color:var(--white);border-color:var(--gris)}
-@supports (padding:max(0px)){.lang-toggle{top:max(14px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right))}}
+@supports (padding:max(0px)){.lang-toggle{top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right))}}
+
+/* ═══ F monogram (recurring signature) ═══ */
+.f-mark{display:inline-flex;align-items:center;justify-content:center}
+.f-mark svg{display:block}
+.f-watermark{
+  position:absolute;font-family:'Playfair Display',serif;font-weight:900;
+  color:rgba(255,253,247,.025);
+  font-size:clamp(280px,60vw,560px);line-height:.8;letter-spacing:-.05em;
+  z-index:1;pointer-events:none;user-select:none;
+  bottom:-8%;right:-6%;font-style:italic;
+}
+.f-divider{
+  display:flex;align-items:center;justify-content:center;
+  padding:48px 24px;position:relative;
+}
+.f-divider::before,.f-divider::after{
+  content:'';flex:1;max-width:80px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--line-2));
+}
+.f-divider::after{background:linear-gradient(90deg,var(--line-2),transparent)}
+.f-divider .f-icon{
+  font-family:'Playfair Display',serif;font-weight:700;font-style:italic;
+  font-size:32px;color:var(--gris);margin:0 24px;line-height:1;opacity:.55;
+}
 
 /* ═══ HERO ═══ */
 .hero{
-  position:relative;height:100svh;min-height:560px;
+  position:relative;height:100svh;min-height:580px;
   overflow:hidden;display:flex;align-items:flex-end;
   background:#000;
 }
@@ -77,138 +112,113 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
   position:absolute;inset:0;width:100%;height:100%;
   object-fit:cover;object-position:center 25%;
   z-index:0;
-  animation:slowZoom 22s ease-in-out infinite alternate;
+  animation:slowZoom 24s ease-in-out infinite alternate;
 }
 @keyframes slowZoom{
   0%{transform:scale(1.0)}
-  100%{transform:scale(1.08)}
+  100%{transform:scale(1.07)}
 }
 .hero-overlay{
   position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,.92) 100%),
-    radial-gradient(ellipse at 50% 100%,rgba(0,0,0,.6),transparent 70%);
+    linear-gradient(180deg,rgba(15,12,10,.5) 0%,rgba(15,12,10,0) 22%,rgba(15,12,10,0) 50%,rgba(15,12,10,.95) 100%),
+    radial-gradient(ellipse at 50% 100%,rgba(15,12,10,.6),transparent 70%);
+}
+.hero-watermark{
+  position:absolute;z-index:2;pointer-events:none;
+  top:18%;right:-8%;
+  font-family:'Playfair Display',serif;font-weight:900;font-style:italic;
+  font-size:clamp(220px,55vw,460px);line-height:.8;
+  color:rgba(255,253,247,.04);
+  letter-spacing:-.04em;
 }
 .hero-content{
-  position:relative;z-index:2;
-  width:100%;padding:0 24px 40px;
-  padding-bottom:max(40px,calc(env(safe-area-inset-bottom) + 28px));
+  position:relative;z-index:3;
+  width:100%;padding:0 24px 44px;
+  padding-bottom:max(44px,calc(env(safe-area-inset-bottom) + 32px));
 }
-.hero-eyebrow{
-  font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gris);
-  margin-bottom:14px;font-weight:500;
-  display:flex;align-items:center;gap:10px;
+.hero-issue{
+  font-family:'Inter',sans-serif;
+  font-size:9.5px;letter-spacing:.4em;text-transform:uppercase;
+  color:var(--gris);font-weight:500;margin-bottom:18px;
+  display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid var(--line);padding-bottom:14px;
 }
-.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gris)}
+.hero-issue .left{display:flex;align-items:center;gap:12px}
+.hero-issue .left::before{content:'';width:24px;height:1px;background:var(--gris)}
 .hero h1{
   font-family:'Playfair Display',serif;
-  font-weight:700;font-size:clamp(48px,15vw,96px);
-  line-height:.92;letter-spacing:-.02em;color:var(--white);
-  margin-bottom:18px;
+  font-weight:800;font-size:clamp(56px,17vw,128px);
+  line-height:.86;letter-spacing:-.025em;color:var(--white);
+  margin-bottom:22px;text-transform:uppercase;
 }
-.hero h1 em{font-style:italic;font-weight:400;color:var(--gris);display:block}
+.hero h1 em{
+  font-style:italic;font-weight:400;color:var(--gris);
+  display:block;text-transform:none;letter-spacing:-.02em;
+}
 .hero-hook{
+  font-family:'Inter',sans-serif;
   font-size:11px;letter-spacing:.28em;text-transform:uppercase;
-  color:var(--gris);font-weight:500;margin-bottom:20px;
-  line-height:1.6;max-width:480px;
+  color:var(--gris);font-weight:500;margin-bottom:24px;
+  line-height:1.7;max-width:520px;
 }
 .hero-hook strong{color:var(--white);font-weight:600}
 .hero-tagline{
   font-family:'Playfair Display',serif;font-style:italic;
-  font-size:clamp(15px,4.2vw,20px);color:var(--text);
-  font-weight:400;letter-spacing:.01em;line-height:1.4;
-  margin-bottom:24px;max-width:520px;
+  font-size:clamp(15px,4.4vw,21px);color:var(--text);
+  font-weight:400;letter-spacing:.005em;line-height:1.45;
+  margin-bottom:28px;max-width:540px;
 }
 .hero-meta{
   display:flex;gap:20px;flex-wrap:wrap;
-  font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris);
+  font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gris);
   font-weight:500;
 }
 .hero-meta span{display:flex;align-items:center;gap:8px}
-.hero-meta span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gris)}
+.hero-meta span::before{content:'';width:3px;height:3px;background:var(--gris)}
 .hero-meta span:first-child::before{display:none}
 
-.hero-stats{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  margin-top:28px;border-top:1px solid var(--line);
-  padding-top:20px;gap:12px;
-}
-.hero-stat{display:flex;flex-direction:column}
-.hero-stat .n{
-  font-family:'Playfair Display',serif;font-weight:700;
-  font-size:clamp(22px,6vw,32px);color:var(--white);line-height:1;
-  letter-spacing:-.02em;
-}
-.hero-stat .l{
-  font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--text-muted);margin-top:6px;font-weight:500;
-}
-
 .scroll-cue{
-  position:absolute;bottom:max(14px,env(safe-area-inset-bottom));left:50%;
-  transform:translateX(-50%);z-index:3;
-  font-size:8px;letter-spacing:.4em;text-transform:uppercase;
-  color:var(--text-muted);display:flex;flex-direction:column;align-items:center;gap:8px;
-  animation:bounce 2s ease-in-out infinite;pointer-events:none;
+  position:absolute;bottom:max(16px,env(safe-area-inset-bottom));left:50%;
+  transform:translateX(-50%);z-index:4;
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:11px;letter-spacing:.18em;
+  color:var(--text-muted);display:flex;flex-direction:column;align-items:center;gap:10px;
+  animation:bounce 2.4s ease-in-out infinite;pointer-events:none;
 }
-.scroll-cue::after{content:'';width:1px;height:20px;background:linear-gradient(180deg,var(--gris),transparent)}
+.scroll-cue::after{content:'';width:1px;height:22px;background:linear-gradient(180deg,var(--gris),transparent)}
 @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 
 /* ═══ SECTIONS ═══ */
 section{position:relative}
-.sec{padding:80px 24px;max-width:1200px;margin:0 auto}
-.sec-head{margin-bottom:32px}
+.sec{padding:84px 24px;max-width:1200px;margin:0 auto;position:relative}
+.sec-no{
+  font-family:'Playfair Display',serif;font-weight:400;font-style:italic;
+  font-size:14px;color:var(--gris);margin-bottom:8px;letter-spacing:.04em;opacity:.7;
+}
+.sec-head{margin-bottom:36px;position:relative}
 .sec-tag{
-  font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;
-  color:var(--gris);font-weight:500;margin-bottom:16px;
-  display:flex;align-items:center;gap:10px;
+  font-family:'Inter',sans-serif;
+  font-size:9.5px;letter-spacing:.36em;text-transform:uppercase;
+  color:var(--gris);font-weight:500;margin-bottom:18px;
+  display:flex;align-items:center;gap:12px;
 }
 .sec-tag::before{content:'';width:18px;height:1px;background:var(--gris)}
 .sec-head h2{
   font-family:'Playfair Display',serif;
-  font-size:clamp(28px,8vw,52px);font-weight:700;
-  color:var(--white);line-height:1.05;letter-spacing:-.02em;
-  margin-bottom:14px;
+  font-size:clamp(32px,9vw,60px);font-weight:800;
+  color:var(--white);line-height:1.0;letter-spacing:-.025em;
+  margin-bottom:16px;text-transform:uppercase;
 }
-.sec-head h2 em{font-style:italic;color:var(--gris);font-weight:400}
+.sec-head h2 em{font-style:italic;color:var(--gris);font-weight:400;text-transform:none}
 .sec-head p{
-  font-size:14px;color:var(--text-soft);line-height:1.7;
-  max-width:560px;
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:15.5px;color:var(--text-soft);line-height:1.7;
+  max-width:580px;font-weight:400;
 }
-.sec-divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:0 24px}
 
-/* ═══ LOGO WALL ═══ */
-.logos-block{
-  background:linear-gradient(180deg,var(--bg) 0%,#080808 50%,var(--bg) 100%);
-  padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-}
-.tier{margin-bottom:48px}
-.tier:last-child{margin-bottom:0}
-.tier-label{
-  text-align:center;font-size:9px;letter-spacing:.4em;text-transform:uppercase;
-  color:var(--text-muted);margin-bottom:28px;font-weight:500;
-}
-.tier-label::before,.tier-label::after{
-  content:'';display:inline-block;width:32px;height:1px;
-  background:var(--line-2);vertical-align:middle;margin:0 14px;
-}
-.logo-row{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:36px 28px;
-  padding:0 32px;align-items:center;justify-items:center;
-  max-width:900px;margin:0 auto;
-}
-.logo-row img{
-  max-height:38px;width:auto;
-  filter:brightness(0) invert(1);
-  opacity:.65;transition:opacity .3s;
-}
-.logo-row.tier-luxury img{max-height:46px;opacity:.78}
-.logo-row img:hover{opacity:1}
-
-/* ═══ EDITORIAL GALLERY ═══ */
-.gallery{padding:0;overflow:hidden}
+/* ═══ EDITORIAL GALLERY (full-bleed editorial spread) ═══ */
+.gallery{padding:0;overflow:hidden;background:#000}
 .gallery-scroll{
   display:flex;gap:0;
   overflow-x:auto;overflow-y:hidden;
@@ -218,73 +228,33 @@ section{position:relative}
 }
 .gallery-scroll::-webkit-scrollbar{display:none}
 .gallery-img{
-  flex:0 0 92%;aspect-ratio:3/4;
+  flex:0 0 96%;aspect-ratio:4/5;
   scroll-snap-align:center;
   background-size:cover;background-position:center;
-  margin:0 4%;border-radius:4px;
+  margin:0 2%;
   position:relative;
+  filter:contrast(1.06) saturate(.92);
 }
-.gallery-img:first-child{margin-left:8%}
-.gallery-img:last-child{margin-right:8%}
-.gallery-caption{
-  position:absolute;bottom:14px;left:14px;right:14px;
-  font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;
-  color:var(--white);font-weight:500;
+.gallery-img:first-child{margin-left:4%}
+.gallery-img:last-child{margin-right:4%}
+.gallery-num{
+  position:absolute;top:18px;left:18px;
+  font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
+  font-size:32px;color:var(--white);
+  text-shadow:0 2px 16px rgba(0,0,0,.7);
+  letter-spacing:-.02em;
+}
+.gallery-credit{
+  position:absolute;bottom:18px;right:18px;
+  font-family:'Inter',sans-serif;
+  font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--white);font-weight:500;opacity:.85;
   text-shadow:0 2px 12px rgba(0,0,0,.7);
 }
 
-/* ═══ PROMISE CARDS ═══ */
-.promise-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
-.promise{
-  background:linear-gradient(160deg,var(--surface),var(--bg-2));
-  border:1px solid var(--line);border-radius:6px;
-  padding:24px;position:relative;overflow:hidden;
-}
-.promise::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--gris),transparent);
-  opacity:.4;
-}
-.promise-num{
-  font-family:'Playfair Display',serif;font-style:italic;
-  font-size:14px;color:var(--gris);margin-bottom:12px;font-weight:400;
-}
-.promise h3{
-  font-family:'Playfair Display',serif;font-size:20px;font-weight:700;
-  color:var(--white);margin-bottom:8px;line-height:1.2;letter-spacing:-.01em;
-}
-.promise p{font-size:13px;color:var(--text-soft);line-height:1.65}
-
-/* ═══ NUMBERS STRIP ═══ */
-.numbers{
-  background:#060606;padding:64px 24px;
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-}
-.numbers-inner{max-width:1200px;margin:0 auto}
-.numbers-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);
-  gap:1px;background:var(--line);
-  border:1px solid var(--line);
-}
-.num-cell{
-  background:#060606;padding:28px 18px;text-align:center;
-}
-.num-cell .n{
-  font-family:'Playfair Display',serif;font-weight:700;
-  font-size:clamp(28px,8vw,40px);color:var(--white);line-height:1;
-  letter-spacing:-.02em;
-}
-.num-cell .l{
-  font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;
-  color:var(--text-muted);margin-top:10px;font-weight:500;
-}
-.num-source{
-  text-align:center;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--text-muted);margin-top:20px;
-}
-
-/* ═══ CAMPAIGN VIDEOS (self-hosted MP4) ═══ */
-.tt-carousel{margin:0 -24px;padding:8px 0 24px}
+/* ═══ CAMPAIGN VIDEOS (films) ═══ */
+.films-intro{padding:64px 24px 32px;max-width:1200px;margin:0 auto}
+.tt-carousel{margin:0 -24px;padding:8px 0 36px}
 .tt-track{
   display:flex;gap:14px;
   overflow-x:auto;overflow-y:hidden;
@@ -297,7 +267,7 @@ section{position:relative}
 .tt-card{
   flex:0 0 80%;max-width:320px;
   scroll-snap-align:center;
-  background:#000;border:1px solid var(--line);border-radius:8px;
+  background:#000;border-top:1px solid var(--line);
   overflow:hidden;
 }
 .tt-frame{
@@ -307,126 +277,293 @@ section{position:relative}
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
 }
 .tt-meta{
-  padding:14px 16px;display:flex;justify-content:space-between;align-items:center;
+  padding:16px 18px 4px;
+}
+.tt-meta .b{
+  font-size:18px;color:var(--white);font-weight:700;
+  font-family:'Playfair Display',serif;display:block;letter-spacing:-.01em;
+}
+.tt-meta .t{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:12px;color:var(--gris);font-weight:400;margin-top:2px;display:block;
+}
+.unmute-btn{
+  position:absolute;bottom:14px;right:14px;z-index:5;
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(15,12,10,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid var(--line-2);
+  font-size:14px;color:var(--white);
+  cursor:pointer;
+}
+.unmute-btn:hover{background:rgba(15,12,10,.9)}
+
+/* ═══ LOGO WALL (only luxury) ═══ */
+.logos-block{
+  background:linear-gradient(180deg,var(--bg) 0%,#0a0806 50%,var(--bg) 100%);
+  padding:80px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  position:relative;overflow:hidden;
+}
+.tier-label{
+  text-align:center;font-family:'Playfair Display',serif;font-style:italic;
+  font-size:14px;color:var(--text-muted);margin-bottom:42px;font-weight:400;
+}
+.tier-label::before,.tier-label::after{
+  content:'—';display:inline-block;color:var(--line-2);margin:0 18px;font-style:normal;
+}
+.logo-row{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:42px 24px;
+  padding:0 32px;align-items:center;justify-items:center;
+  max-width:980px;margin:0 auto;
+}
+.logo-row img{
+  max-height:54px;width:auto;
+  filter:brightness(0) invert(1);
+  opacity:.78;transition:opacity .3s;
+}
+.logo-row img:hover{opacity:1}
+
+/* ═══ CASE STUDY CALLOUT (one campaign, narrative) ═══ */
+.case-study{
+  padding:80px 24px;max-width:900px;margin:0 auto;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  position:relative;
+}
+.case-study .quote{
+  font-family:'Playfair Display',serif;font-weight:400;font-style:italic;
+  font-size:clamp(20px,5vw,30px);line-height:1.4;color:var(--white);
+  letter-spacing:-.01em;margin-bottom:24px;
+}
+.case-study .quote::before{
+  content:'"';font-size:1.4em;color:var(--gris);
+  display:block;line-height:.5;margin-bottom:8px;font-weight:700;
+}
+.case-study .attribution{
+  font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--text-muted);font-weight:500;
+}
+
+/* ═══ AVAILABLE (call sheet style) ═══ */
+.available{padding:80px 24px;max-width:1200px;margin:0 auto}
+.available-grid{
+  display:grid;grid-template-columns:1fr;gap:0;margin-top:32px;
   border-top:1px solid var(--line);
 }
-.tt-meta .b{font-size:14px;color:var(--white);font-weight:600;font-family:'Playfair Display',serif}
-.tt-meta .t{font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris);font-weight:500}
-
-/* ═══ PROFILE CARDS ═══ */
-.profile-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
-.pcard{
-  background:var(--surface);border:1px solid var(--line);border-radius:6px;
-  padding:24px;
+.available-row{
+  display:grid;grid-template-columns:80px 1fr;gap:24px;
+  padding:22px 0;border-bottom:1px solid var(--line);
+  align-items:start;
 }
-.pcard h3{
+.available-row .av-label{
+  font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--text-muted);font-weight:500;
+  padding-top:6px;
+}
+.available-row .av-content{
+  font-family:'Playfair Display',serif;font-weight:400;
+  font-size:18px;color:var(--white);line-height:1.45;letter-spacing:-.005em;
+}
+.available-row .av-content em{color:var(--gris);font-style:italic;font-weight:400}
+.available-row .av-content small{
+  display:block;font-family:'Inter',sans-serif;font-style:normal;
+  font-size:11.5px;color:var(--text-soft);font-weight:400;line-height:1.6;
+  margin-top:6px;letter-spacing:.01em;
+}
+
+/* ═══ THE MAN (profile, feature article style) ═══ */
+.profile-feature{padding:80px 24px;max-width:1200px;margin:0 auto}
+.profile-grid{display:grid;grid-template-columns:1fr;gap:0;margin-top:32px;border-top:1px solid var(--line)}
+.prow{
+  display:grid;grid-template-columns:120px 1fr;gap:20px;
+  padding:18px 0;border-bottom:1px solid var(--line);
+  align-items:baseline;
+}
+.prow .pk{
+  font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--text-muted);font-weight:500;
+}
+.prow .pv{
+  font-family:'Playfair Display',serif;font-weight:400;
+  font-size:16px;color:var(--text);line-height:1.5;letter-spacing:-.005em;
+}
+.prow .pv.hl{color:var(--white)}
+.prow .pv em{color:var(--gris);font-style:italic}
+.profile-bio{
+  font-family:'Playfair Display',serif;font-weight:400;font-style:italic;
+  font-size:clamp(16px,4vw,20px);line-height:1.7;color:var(--text-soft);
+  max-width:680px;margin:24px 0 8px;letter-spacing:-.005em;
+}
+
+/* ═══ INDEX (numbers, footer-style small) ═══ */
+.index-block{
+  background:#0a0806;padding:48px 24px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.index-inner{max-width:1200px;margin:0 auto}
+.index-head{
+  font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
+  font-size:13px;color:var(--text-muted);text-align:center;margin-bottom:28px;
+}
+.index-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--line);
+  border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);
+}
+.idx-cell{
+  background:#0a0806;padding:24px 16px;text-align:center;
+}
+.idx-cell .n{
+  font-family:'Playfair Display',serif;font-weight:700;
+  font-size:clamp(24px,7vw,34px);color:var(--white);line-height:1;
+  letter-spacing:-.02em;
+}
+.idx-cell .l{
+  font-family:'Inter',sans-serif;
+  font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--text-muted);margin-top:10px;font-weight:500;
+}
+.idx-source{
+  text-align:center;font-family:'Playfair Display',serif;font-style:italic;
+  font-size:10.5px;color:var(--text-muted);margin-top:18px;font-weight:400;
+}
+
+/* ═══ AUDIENCE (compact) ═══ */
+.aud-block{padding:60px 24px;max-width:900px;margin:0 auto}
+.aud-row{display:grid;grid-template-columns:1fr;gap:0;margin-top:24px;border-top:1px solid var(--line)}
+.aud-card{padding:22px 0;border-bottom:1px solid var(--line)}
+.aud-card h3{
+  font-family:'Inter',sans-serif;
   font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;
   color:var(--gris);font-weight:500;margin-bottom:16px;
 }
-.pcard .row{
-  display:flex;justify-content:space-between;align-items:baseline;gap:12px;
-  padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);
-  font-size:13px;
-}
-.pcard .row:last-child{border:none}
-.pcard .k{color:var(--text-muted);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;flex-shrink:0}
-.pcard .v{color:var(--text);font-weight:500;text-align:right}
-.pcard .v.hl{color:var(--white)}
-
-/* ═══ AUDIENCE ═══ */
-.aud-row{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
-.aud-card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px}
-.aud-card h3{
-  font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;
-  color:var(--gris);font-weight:500;margin-bottom:18px;
-}
-.bar{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.bar{display:flex;align-items:center;gap:14px;margin-bottom:11px}
 .bar:last-child{margin-bottom:0}
-.bar .bl{font-size:11px;color:var(--text-muted);min-width:84px;text-align:right;font-weight:500}
-.bar .bt{flex:1;height:3px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
-.bar .bf{height:100%;background:linear-gradient(90deg,var(--gris),#e8e8e8);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
-.bar .bf.hl{background:linear-gradient(90deg,var(--rojo),#ff6b6b)}
-.bar .bp{font-size:11px;color:var(--text);font-weight:600;min-width:30px}
-.gender-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:12px}
-.gen{text-align:center;padding:18px 8px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
-.gen .n{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--white)}
-.gen .l{font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--text-muted);margin-top:6px;font-weight:500}
+.bar .bl{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--text-soft);min-width:96px;text-align:right;font-weight:400}
+.bar .bt{flex:1;height:1px;background:rgba(255,253,247,.08);overflow:hidden}
+.bar .bf{height:100%;background:linear-gradient(90deg,var(--gris),#e8e6e0);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar .bf.hl{background:linear-gradient(90deg,var(--rojo),#e8716c)}
+.bar .bp{font-family:'Inter',sans-serif;font-size:11px;color:var(--text);font-weight:600;min-width:34px;letter-spacing:.04em}
+.gender-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.gen{text-align:center}
+.gen .n{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--white);line-height:1}
+.gen .l{font-family:'Inter',sans-serif;font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-muted);margin-top:8px;font-weight:500}
 
 /* ═══ CTA / CONTACT ═══ */
 .cta-block{
-  text-align:center;padding:80px 24px;
-  background:linear-gradient(180deg,var(--bg),#060606);
+  text-align:center;padding:96px 24px 56px;
+  background:linear-gradient(180deg,var(--bg),#0a0806);
+  position:relative;overflow:hidden;
 }
+.cta-block .f-bg{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:'Playfair Display',serif;font-weight:900;font-style:italic;
+  font-size:clamp(280px,55vw,500px);line-height:.85;
+  color:rgba(255,253,247,.022);letter-spacing:-.06em;
+  pointer-events:none;
+}
+.cta-block .inner{position:relative;z-index:2}
 .cta-block h2{
   font-family:'Playfair Display',serif;
-  font-size:clamp(32px,9vw,56px);font-weight:700;color:var(--white);
-  letter-spacing:-.02em;margin-bottom:14px;line-height:1.05;
+  font-size:clamp(36px,10vw,72px);font-weight:800;color:var(--white);
+  letter-spacing:-.025em;margin-bottom:18px;line-height:1.0;text-transform:uppercase;
 }
-.cta-block h2 em{font-style:italic;color:var(--gris);font-weight:400}
-.cta-block p{font-size:14px;color:var(--text-soft);max-width:440px;margin:0 auto 32px}
+.cta-block h2 em{font-style:italic;color:var(--gris);font-weight:400;text-transform:none}
+.cta-block .lead{
+  font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
+  font-size:16px;color:var(--text-soft);max-width:520px;margin:0 auto 36px;line-height:1.6;
+}
 .cta-card{
   display:inline-block;text-align:left;
-  border:1px solid var(--line-2);border-radius:8px;padding:28px 32px;
-  background:var(--surface);min-width:280px;
+  border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);
+  padding:28px 36px;
+  background:transparent;min-width:280px;
 }
 .cta-card .role{
-  font-size:9px;letter-spacing:.32em;text-transform:uppercase;
-  color:var(--gris);margin-bottom:8px;font-weight:500;
+  font-family:'Inter',sans-serif;
+  font-size:9px;letter-spacing:.36em;text-transform:uppercase;
+  color:var(--gris);margin-bottom:12px;font-weight:500;
 }
-.cta-card .role::after{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--rojo);margin-left:10px;vertical-align:middle}
-.cta-card .name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:12px}
+.cta-card .name{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:8px;letter-spacing:-.01em}
+.cta-card .title-line{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:13.5px;color:var(--text-soft);font-weight:400;margin-bottom:20px;
+}
 .cta-card .email{
-  display:block;font-size:14px;color:var(--white);
-  letter-spacing:.02em;margin-top:14px;
-  border-top:1px solid var(--line);padding-top:14px;
+  display:block;font-family:'Inter',sans-serif;font-size:14.5px;color:var(--white);
+  letter-spacing:.01em;margin-top:18px;
+  border-top:1px solid var(--line);padding-top:18px;font-weight:500;
 }
 .cta-card .email:hover{color:var(--gris)}
-.cta-tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:24px}
-.cta-tag{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--text-muted);padding:6px 14px;border:1px solid var(--line);border-radius:24px;font-weight:500}
+.cta-card .ig{
+  display:block;font-family:'Inter',sans-serif;font-size:11.5px;color:var(--text-soft);
+  letter-spacing:.04em;margin-top:8px;
+}
+.cta-card .ig:hover{color:var(--white)}
+.cta-tags{display:flex;gap:0;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.cta-tag{
+  font-family:'Inter',sans-serif;
+  font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-muted);
+  padding:7px 18px;border:1px solid var(--line);font-weight:500;
+  border-right:none;
+}
+.cta-tag:last-child{border-right:1px solid var(--line)}
 
 /* ═══ FOOTER ═══ */
 footer{
   text-align:center;padding:36px 24px 28px;
   border-top:1px solid var(--line);
-  background:#060606;
+  background:#0a0806;position:relative;
 }
-footer .legal{font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-muted);font-weight:500;line-height:2}
-footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;margin-bottom:6px;text-transform:uppercase}
+footer .f-seal{
+  font-family:'Playfair Display',serif;font-style:italic;font-weight:700;
+  font-size:24px;color:var(--gris);opacity:.4;margin-bottom:14px;
+  display:inline-block;line-height:1;
+}
+footer .legal{
+  font-family:'Inter',sans-serif;
+  font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--text-muted);font-weight:500;line-height:2
+}
+footer .sm{
+  font-family:'Inter',sans-serif;
+  font-size:9px;letter-spacing:.32em;color:var(--gris);font-weight:600;
+  margin-bottom:6px;text-transform:uppercase
+}
 
 /* ═══ REVEAL ═══ */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
 .reveal.in{opacity:1;transform:none}
 
 /* ═══ TABLET ═══ */
 @media(min-width:640px){
-  .sec{padding:96px 40px}
-  .logo-row{grid-template-columns:repeat(4,1fr);gap:32px;padding:0 24px}
-  .logo-row img{max-height:42px}
-  .logo-row.tier-luxury img{max-height:54px}
-  .promise-grid{grid-template-columns:repeat(2,1fr);gap:16px}
-  .profile-grid{grid-template-columns:1fr 1fr;gap:16px}
-  .aud-row{grid-template-columns:1fr 1fr;gap:16px}
-  .numbers-grid{grid-template-columns:repeat(4,1fr)}
-  .num-cell{padding:36px 20px}
-  .gallery-img{flex:0 0 60%}
+  .sec{padding:108px 40px}
+  .logo-row{grid-template-columns:repeat(4,1fr);gap:36px;padding:0 24px}
+  .logo-row img{max-height:64px}
+  .available-row{grid-template-columns:140px 1fr;gap:32px;padding:26px 0}
+  .available-row .av-content{font-size:21px}
+  .prow{grid-template-columns:160px 1fr;padding:22px 0}
+  .prow .pv{font-size:18px}
+  .gallery-img{flex:0 0 70%}
   .tt-card{flex:0 0 320px}
-  .hero-content{padding:0 40px 56px}
+  .index-grid{grid-template-columns:repeat(4,1fr)}
+  .hero-content{padding:0 40px 60px}
+  .case-study{padding:96px 40px}
 }
 
 /* ═══ DESKTOP ═══ */
 @media(min-width:1024px){
-  .sec{padding:120px 56px}
-  .hero-content{padding:0 56px 72px}
-  .hero h1{font-size:clamp(80px,11vw,140px)}
-  .hero-stats{max-width:560px;margin-top:36px;padding-top:24px}
-  .promise-grid{grid-template-columns:repeat(3,1fr)}
-  .gallery-img{flex:0 0 38%}
+  .sec{padding:128px 56px}
+  .hero-content{padding:0 56px 76px}
+  .hero h1{font-size:clamp(96px,12vw,180px)}
+  .gallery-img{flex:0 0 44%}
   .tt-track{padding:0 56px;justify-content:flex-start}
-  .tt-card{flex:0 0 300px}
-  .logos-block{padding:80px 0}
-  .logo-row{padding:0;gap:48px}
-  .logo-row img{max-height:48px}
-  .logo-row.tier-luxury img{max-height:60px}
+  .tt-card{flex:0 0 320px}
+  .logos-block{padding:96px 0}
+  .logo-row{padding:0;gap:56px}
+  .logo-row img{max-height:72px}
+  .case-study .quote{font-size:32px}
 }
 
 /* ═══ Reduced motion ═══ */
@@ -438,15 +575,16 @@ footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;
 
 /* ═══ Print ═══ */
 .print-only{display:none}
-.pdf-qr{display:flex;align-items:center;gap:16px;justify-content:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
-.pdf-qr img{width:90px;height:90px;background:#fff;padding:6px;border-radius:4px}
-.pdf-qr .qr-text{text-align:left;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--text-muted);line-height:1.6}
-.pdf-qr .qr-text strong{display:block;color:var(--text);font-weight:600;margin-bottom:4px;font-size:10px}
+.pdf-qr{display:flex;align-items:center;gap:18px;justify-content:center;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.pdf-qr img{width:96px;height:96px;background:#fff;padding:6px}
+.pdf-qr .qr-text{text-align:left;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--text-muted);line-height:1.7}
+.pdf-qr .qr-text strong{display:block;color:var(--text);font-weight:600;margin-bottom:5px;font-size:10px;font-family:'Playfair Display',serif;font-style:italic;letter-spacing:.04em;text-transform:none}
 @media print{
-  .lang-toggle,.scroll-cue,.tt-carousel,.hero-video{display:none}
+  body::before{display:none}
+  .lang-toggle,.scroll-cue,.tt-carousel,.hero-video,.unmute-btn{display:none}
   .print-only{display:block!important}
   body{background:#fff;color:#111}
-  .hero,.numbers,.cta-block,footer{background:#fff;color:#111}
+  .hero,.index-block,.cta-block,footer,.logos-block{background:#fff;color:#111}
   .hero h1,.sec-head h2,.cta-block h2{color:#111}
   .hero{background-image:url('assets/foto1.jpg');background-size:cover}
   .pdf-qr .qr-text{color:#666}
@@ -458,296 +596,339 @@ footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;
 
 <button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN</button>
 
-<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<!-- ═══════════════════════════ I · HERO ═══════════════════════════ -->
 <header class="hero" id="top">
   <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/foto1.jpg" aria-hidden="true">
     <source src="assets/hero_jpg.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
+  <div class="hero-watermark italic" aria-hidden="true">F</div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Brand Media Kit · 2026</div>
+    <div class="hero-issue">
+      <span class="left">Issue · 2026</span>
+      <span>Brand Media Kit</span>
+    </div>
     <h1 class="serif">
       Javier<br>
       <em>Ferreira</em>
     </h1>
     <div class="hero-hook">
-      <span lang="es"><strong>Already wears</strong> Rabanne · Jean Paul Gaultier · Carolina Herrera · Diesel</span>
-      <span lang="en"><strong>Already wears</strong> Rabanne · Jean Paul Gaultier · Carolina Herrera · Diesel</span>
+      <strong>Wears</strong> Jean Paul Gaultier · Rabanne · Carolina Herrera · Diesel
     </div>
     <p class="hero-tagline">
-      <span lang="es">3.9M-strong digital audience meets fashion's front row.</span>
-      <span lang="en">3.9M-strong digital audience meets fashion's front row.</span>
+      <span lang="es">Un audiencia de 3.9M se cruza con la front row.</span>
+      <span lang="en">A 3.9M-strong digital audience meets the front row.</span>
     </p>
     <div class="hero-meta">
-      <span>Medellín · Colombia</span>
-      <span lang="es">1.95 m</span>
-      <span lang="en">6'4"</span>
+      <span>Medellín</span>
+      <span lang="es">1.95 m · 6'4"</span>
+      <span lang="en">6'4" · 1.95 m</span>
       <span>ES · EN</span>
-      <span lang="es">PFW · BFW 2026</span>
-      <span lang="en">PFW · BFW 2026</span>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="n serif">3.9<span style="font-size:.6em;color:var(--gris)">M</span></div>
-        <div class="l">TikTok</div>
-      </div>
-      <div class="hero-stat">
-        <div class="n serif">455<span style="font-size:.6em;color:var(--gris)">K</span></div>
-        <div class="l">Instagram</div>
-      </div>
-      <div class="hero-stat">
-        <div class="n serif">7<span style="font-size:.6em;color:var(--gris)">+</span></div>
-        <div class="l"><span lang="es">Marcas</span><span lang="en">Brands</span></div>
-      </div>
     </div>
   </div>
-  <div class="scroll-cue" aria-hidden="true">
-    <span>Scroll</span>
-  </div>
+  <div class="scroll-cue serif italic" aria-hidden="true">i</div>
 </header>
 
-<!-- ═══════════════════════════ LOGO WALL ═══════════════════════════ -->
-<section class="logos-block" aria-label="Brand partners">
-  <div class="tier">
-    <div class="tier-label">
-      <span>Luxury &amp; Fashion</span>
-    </div>
-    <div class="logo-row tier-luxury">
-      <img src="assets/logos/rabanne.png" alt="Rabanne" loading="lazy" decoding="async">
-      <img src="assets/logos/jpg.png" alt="Jean Paul Gaultier" loading="lazy" decoding="async">
-      <img src="assets/logos/carolinaherrera.png" alt="Carolina Herrera" loading="lazy" decoding="async">
-      <img src="assets/logos/diesel.png" alt="Diesel" loading="lazy" decoding="async">
-    </div>
-  </div>
-  <div class="tier">
-    <div class="tier-label">
-      <span>Beauty &amp; Lifestyle</span>
-    </div>
-    <div class="logo-row">
-      <img src="assets/logos/kerastase.png" alt="Kérastase" loading="lazy" decoding="async">
-      <img src="assets/logos/headandshoulders.png" alt="Head &amp; Shoulders" loading="lazy" decoding="async">
-      <img src="assets/logos/nautica.png" alt="Nautica" loading="lazy" decoding="async">
-      <img src="assets/logos/sears.png" alt="Sears" loading="lazy" decoding="async">
-    </div>
-  </div>
-</section>
+<!-- ═══════════════════════════ F divider ═══════════════════════════ -->
+<div class="f-divider" aria-hidden="true"><span class="f-icon">F</span></div>
 
-<!-- ═══════════════════════════ EDITORIAL GALLERY ═══════════════════════════ -->
-<section class="sec" aria-label="Editorial">
-  <div class="sec-head reveal">
-    <div class="sec-tag">
-      <span lang="es">Editorial</span>
-      <span lang="en">Editorial</span>
+<!-- ═══════════════════════════ II · EDITORIAL SPREAD ═══════════════════════════ -->
+<section aria-label="Editorial">
+  <div class="sec">
+    <div class="sec-no italic">II</div>
+    <div class="sec-head reveal">
+      <div class="sec-tag">
+        <span lang="es">Editorial</span>
+        <span lang="en">Editorial</span>
+      </div>
+      <h2 class="serif">
+        <span lang="es">Una <em>estética</em> construida.</span>
+        <span lang="en">A built <em>aesthetic.</em></span>
+      </h2>
+      <p>
+        <span lang="es">Imagen reconocible que ya habla el idioma de las casas — no requiere adaptación, requiere dirección.</span>
+        <span lang="en">A recognizable image already fluent in the language of fashion houses — no adaptation needed, only direction.</span>
+      </p>
     </div>
-    <h2 class="serif">
-      <span lang="es">Una <em>estética</em><br>construida.</span>
-      <span lang="en">A built <em>aesthetic</em>.</span>
-    </h2>
-    <p>
-      <span lang="es">Imagen reconocible que ya habla el idioma de las casas de moda. No requiere adaptación: requiere dirección.</span>
-      <span lang="en">A recognizable image that already speaks the language of fashion houses. No adaptation needed — only direction.</span>
-    </p>
   </div>
 </section>
 
 <div class="gallery">
   <div class="gallery-scroll" role="list">
     <div class="gallery-img" role="listitem" style="background-image:url('assets/foto1.jpg')">
-      <div class="gallery-caption">ADONIS · Editorial 01</div>
+      <div class="gallery-num italic">i</div>
+      <div class="gallery-credit">ADONIS</div>
     </div>
     <div class="gallery-img" role="listitem" style="background-image:url('assets/foto2.jpg')">
-      <div class="gallery-caption">Event · Fashion 02</div>
+      <div class="gallery-num italic">ii</div>
+      <div class="gallery-credit">2025</div>
     </div>
     <div class="gallery-img" role="listitem" style="background-image:url('assets/foto3.jpg')">
-      <div class="gallery-caption">Portrait · 03</div>
+      <div class="gallery-num italic">iii</div>
+      <div class="gallery-credit">Portrait</div>
     </div>
   </div>
 </div>
 
-<div class="sec-divider"></div>
+<!-- ═══════════════════════════ F divider ═══════════════════════════ -->
+<div class="f-divider" aria-hidden="true"><span class="f-icon">F</span></div>
 
-<!-- ═══════════════════════════ FOR FASHION WEEK ═══════════════════════════ -->
-<section class="sec" aria-label="For Fashion Week">
-  <div class="sec-head reveal">
-    <div class="sec-tag">
-      <span lang="es">Para Fashion Week</span>
-      <span lang="en">For Fashion Week</span>
-    </div>
-    <h2 class="serif">
-      <span lang="es">Cómo <em>activar</em><br>su presencia.</span>
-      <span lang="en">How to <em>activate</em><br>his presence.</span>
-    </h2>
-    <p>
-      <span lang="es">Cuatro formatos diseñados para Paris Fashion Week, Bogotá Fashion Week y semanas de moda regionales — adaptables a presupuesto y objetivo de marca.</span>
-      <span lang="en">Four formats built for Paris Fashion Week, Bogotá Fashion Week and regional fashion weeks — adaptable to brand budget and goals.</span>
-    </p>
-  </div>
-  <div class="promise-grid reveal">
-    <div class="promise">
-      <div class="promise-num">01</div>
-      <h3>Front Row</h3>
-      <p>
-        <span lang="es">Asistencia con cobertura nativa: stories en tiempo real, recap editorial y carousel post-show. 4.4M+ audiencia siguiendo desde su feed durante el show.</span>
-        <span lang="en">Attendance with native coverage: real-time stories, editorial recap and post-show carousel. 4.4M+ audience watching live from his feed during the show.</span>
-      </p>
-    </div>
-    <div class="promise">
-      <div class="promise-num">02</div>
-      <h3>Brand Ambassador</h3>
-      <p>
-        <span lang="es">Asociación de temporada como rostro de campaña, presencia en lanzamientos y contenido exclusivo de marca a lo largo del calendario fashion.</span>
-        <span lang="en">Seasonal partnership as campaign face, launch presence and exclusive brand content across the fashion calendar.</span>
-      </p>
-    </div>
-    <div class="promise">
-      <div class="promise-num">03</div>
-      <h3>
-        <span lang="es">Editorial &amp; Lookbook</span>
-        <span lang="en">Editorial &amp; Lookbook</span>
-      </h3>
-      <p>
-        <span lang="es">1.95 m, presencia escultórica y track record probado en editorial de fragancia y moda con Rabanne, JPG, Carolina Herrera y Diesel.</span>
-        <span lang="en">6'4", sculptural presence and proven editorial track record in fragrance and fashion with Rabanne, JPG, Carolina Herrera and Diesel.</span>
-      </p>
-    </div>
-    <div class="promise">
-      <div class="promise-num">04</div>
-      <h3>Runway-Adjacent Content</h3>
-      <p>
-        <span lang="es">Backstage, BTS, look-of-the-day y reels integrados a la estética de la casa. Contenido nativo TikTok / Instagram con métricas reales.</span>
-        <span lang="en">Backstage, BTS, look-of-the-day and reels integrated to the house aesthetic. Native TikTok / Instagram content with real metrics.</span>
-      </p>
-    </div>
-  </div>
-</section>
-
-<div class="sec-divider"></div>
-
-<!-- ═══════════════════════════ NUMBERS ═══════════════════════════ -->
-<section class="numbers" aria-label="Numbers">
-  <div class="numbers-inner">
-    <div class="sec-head reveal" style="text-align:center;margin-bottom:32px">
-      <div class="sec-tag" style="justify-content:center">
-        <span lang="es">Reach &amp; Engagement</span>
-        <span lang="en">Reach &amp; Engagement</span>
+<!-- ═══════════════════════════ III · FILMS ═══════════════════════════ -->
+<section aria-label="Films">
+  <div class="films-intro">
+    <div class="sec-no italic">III</div>
+    <div class="sec-head reveal">
+      <div class="sec-tag">
+        <span lang="es">Selected work · 2023 / 26</span>
+        <span lang="en">Selected work · 2023 / 26</span>
       </div>
-      <h2 class="serif" style="font-size:clamp(28px,7vw,44px)">
-        <span lang="es"><em>Real reach.</em> Audiencia premium.</span>
-        <span lang="en"><em>Real reach.</em> Premium audience.</span>
+      <h2 class="serif">
+        <span lang="es">Cinco <em>maisons.</em><br>Una firma.</span>
+        <span lang="en">Five <em>houses.</em><br>One signature.</span>
       </h2>
-    </div>
-    <div class="numbers-grid reveal">
-      <div class="num-cell">
-        <div class="n serif">3.9M</div>
-        <div class="l"><span lang="es">TikTok Reach</span><span lang="en">TikTok Reach</span></div>
-      </div>
-      <div class="num-cell">
-        <div class="n serif">145.7M</div>
-        <div class="l"><span lang="es">Total Impressions</span><span lang="en">Total Impressions</span></div>
-      </div>
-      <div class="num-cell">
-        <div class="n serif">455K</div>
-        <div class="l">Instagram</div>
-      </div>
-      <div class="num-cell">
-        <div class="n serif">4.8%</div>
-        <div class="l"><span lang="es">Engagement Rate</span><span lang="en">Engagement Rate</span></div>
-      </div>
-    </div>
-    <div class="num-source">
-      <span lang="es">Fuente: TikTok Analytics &amp; Instagram Insights · Marzo 2026</span>
-      <span lang="en">Source: TikTok Analytics &amp; Instagram Insights · March 2026</span>
+      <p>
+        <span lang="es">Cada campaña ejecutada con contenido nativo, alineada a la identidad visual de la casa.</span>
+        <span lang="en">Each campaign in native content, aligned to the visual identity of the house.</span>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ CAMPAIGNS / VIDEOS ═══════════════════════════ -->
-<section class="sec" aria-label="Campaigns">
-  <div class="sec-head reveal">
-    <div class="sec-tag">
-      <span lang="es">Campañas</span>
-      <span lang="en">Campaigns</span>
-    </div>
-    <h2 class="serif">
-      <span lang="es">Casos <em>reales.</em><br>Marcas globales.</span>
-      <span lang="en">Real <em>cases.</em><br>Global brands.</span>
-    </h2>
-    <p>
-      <span lang="es">Cada campaña ejecutada con contenido nativo, alineada a la identidad visual de la casa. Desliza para explorar.</span>
-      <span lang="en">Each campaign executed with native content, aligned to the house visual identity. Swipe to explore.</span>
-    </p>
-  </div>
-</section>
-
-<div class="tt-carousel" aria-label="Campaign videos">
+<div class="tt-carousel" aria-label="Campaign films">
   <div class="tt-track" role="list">
-    <article class="tt-card" role="listitem">
-      <div class="tt-frame">
-        <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7381938970495601925.jpg">
-          <source src="assets/tt_7381938970495601925.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="tt-meta"><span class="b">Rabanne</span><span class="t"><span lang="es">Fragancia</span><span lang="en">Fragrance</span></span></div>
-    </article>
     <article class="tt-card" role="listitem">
       <div class="tt-frame">
         <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/hero_poster.jpg">
           <source src="assets/hero_jpg.mp4" type="video/mp4">
         </video>
+        <button class="unmute-btn" aria-label="Toggle sound">♪</button>
       </div>
-      <div class="tt-meta"><span class="b">Jean Paul Gaultier</span><span class="t"><span lang="es">Fragancia</span><span lang="en">Fragrance</span></span></div>
+      <div class="tt-meta"><span class="b">Jean Paul Gaultier</span><span class="t italic"><span lang="es">Fragancia · Haute Couture</span><span lang="en">Fragrance · Haute Couture</span></span></div>
+    </article>
+    <article class="tt-card" role="listitem">
+      <div class="tt-frame">
+        <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7381938970495601925.jpg">
+          <source src="assets/tt_7381938970495601925.mp4" type="video/mp4">
+        </video>
+        <button class="unmute-btn" aria-label="Toggle sound">♪</button>
+      </div>
+      <div class="tt-meta"><span class="b">Rabanne</span><span class="t italic"><span lang="es">Fragancia</span><span lang="en">Fragrance</span></span></div>
     </article>
     <article class="tt-card" role="listitem">
       <div class="tt-frame">
         <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7257610125764988165.jpg">
           <source src="assets/tt_7257610125764988165.mp4" type="video/mp4">
         </video>
+        <button class="unmute-btn" aria-label="Toggle sound">♪</button>
       </div>
-      <div class="tt-meta"><span class="b">Diesel</span><span class="t"><span lang="es">Moda</span><span lang="en">Fashion</span></span></div>
+      <div class="tt-meta"><span class="b">Diesel</span><span class="t italic"><span lang="es">Moda</span><span lang="en">Fashion</span></span></div>
     </article>
     <article class="tt-card" role="listitem">
       <div class="tt-frame">
         <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7220902827751673094.jpg">
           <source src="assets/tt_7220902827751673094.mp4" type="video/mp4">
         </video>
+        <button class="unmute-btn" aria-label="Toggle sound">♪</button>
       </div>
-      <div class="tt-meta"><span class="b">Kérastase</span><span class="t">Grooming</span></div>
+      <div class="tt-meta"><span class="b">Kérastase</span><span class="t italic">Beauty</span></div>
     </article>
     <article class="tt-card" role="listitem">
       <div class="tt-frame">
         <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7465771550365453573.jpg">
           <source src="assets/tt_7465771550365453573.mp4" type="video/mp4">
         </video>
+        <button class="unmute-btn" aria-label="Toggle sound">♪</button>
       </div>
-      <div class="tt-meta"><span class="b">Head &amp; Shoulders</span><span class="t">Grooming</span></div>
+      <div class="tt-meta"><span class="b">Head &amp; Shoulders</span><span class="t italic">Beauty</span></div>
     </article>
     <article class="tt-card" role="listitem">
       <div class="tt-frame">
         <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7315110126430539014.jpg">
           <source src="assets/tt_7315110126430539014.mp4" type="video/mp4">
         </video>
+        <button class="unmute-btn" aria-label="Toggle sound">♪</button>
       </div>
-      <div class="tt-meta"><span class="b">Sears × Nautica</span><span class="t">Retail</span></div>
+      <div class="tt-meta"><span class="b">Sears × Nautica</span><span class="t italic">Retail</span></div>
     </article>
   </div>
 </div>
 
-<div class="sec-divider"></div>
+<!-- ═══════════════════════════ F divider ═══════════════════════════ -->
+<div class="f-divider" aria-hidden="true"><span class="f-icon">F</span></div>
 
-<!-- ═══════════════════════════ AUDIENCE ═══════════════════════════ -->
-<section class="sec" aria-label="Audience">
+<!-- ═══════════════════════════ IV · BRAND WALL (luxury only) ═══════════════════════════ -->
+<section class="logos-block" aria-label="Brand partners">
+  <div class="tier-label italic">
+    <span lang="es">Las maisons</span>
+    <span lang="en">The houses</span>
+  </div>
+  <div class="logo-row">
+    <img src="assets/logos/jpg.png" alt="Jean Paul Gaultier" loading="lazy" decoding="async">
+    <img src="assets/logos/rabanne.png" alt="Rabanne" loading="lazy" decoding="async">
+    <img src="assets/logos/carolinaherrera.png" alt="Carolina Herrera" loading="lazy" decoding="async">
+    <img src="assets/logos/diesel.png" alt="Diesel" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<!-- ═══════════════════════════ V · AVAILABLE (call sheet) ═══════════════════════════ -->
+<section class="available" aria-label="Available">
+  <div class="sec-no italic">V</div>
+  <div class="sec-head reveal">
+    <div class="sec-tag">
+      <span lang="es">Disponibilidad</span>
+      <span lang="en">Available</span>
+    </div>
+    <h2 class="serif">
+      <span lang="es"><em>Available.</em></span>
+      <span lang="en"><em>Available.</em></span>
+    </h2>
+    <p>
+      <span lang="es">Ventanas confirmadas para casting, embajadas y campañas — temporada 2026 / 27.</span>
+      <span lang="en">Confirmed windows for casting, ambassadorships and campaigns — 2026 / 27 season.</span>
+    </p>
+  </div>
+  <div class="available-grid reveal">
+    <div class="available-row">
+      <div class="av-label">PFW SS27</div>
+      <div class="av-content">
+        <span lang="es"><em>Paris Fashion Week Hommes</em><br><small>Enero 2027 · Front row, ambassador, editorial</small></span>
+        <span lang="en"><em>Paris Fashion Week Hommes</em><br><small>January 2027 · Front row, ambassador, editorial</small></span>
+      </div>
+    </div>
+    <div class="available-row">
+      <div class="av-label">BFW AW26</div>
+      <div class="av-content">
+        <span lang="es"><em>Bogotá Fashion Week</em><br><small>Agosto 2026 · Local presence, runway-adjacent content</small></span>
+        <span lang="en"><em>Bogotá Fashion Week</em><br><small>August 2026 · Local presence, runway-adjacent content</small></span>
+      </div>
+    </div>
+    <div class="available-row">
+      <div class="av-label">2026</div>
+      <div class="av-content">
+        <span lang="es"><em>Year-round</em><br><small>Brand ambassadorships · Editorial · Lookbook · Native digital content</small></span>
+        <span lang="en"><em>Year-round</em><br><small>Brand ambassadorships · Editorial · Lookbook · Native digital content</small></span>
+      </div>
+    </div>
+    <div class="available-row">
+      <div class="av-label"><span lang="es">Mercados</span><span lang="en">Markets</span></div>
+      <div class="av-content">
+        <em>LATAM · USA · EU</em>
+        <small>
+          <span lang="es">Pasaporte vigente · ES nativo · EN conversacional</span>
+          <span lang="en">Valid passport · Native Spanish · Conversational English</span>
+        </small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ F divider ═══════════════════════════ -->
+<div class="f-divider" aria-hidden="true"><span class="f-icon">F</span></div>
+
+<!-- ═══════════════════════════ VI · THE MAN (profile) ═══════════════════════════ -->
+<section class="profile-feature" aria-label="The man">
+  <div class="sec-no italic">VI</div>
+  <div class="sec-head reveal">
+    <div class="sec-tag">
+      <span lang="es">El artista</span>
+      <span lang="en">The artist</span>
+    </div>
+    <h2 class="serif">
+      <span lang="es">En carne &amp; <em>imagen</em>.</span>
+      <span lang="en">In flesh &amp; <em>image</em>.</span>
+    </h2>
+    <p class="profile-bio">
+      <span lang="es">Javier Ferreira es artista urbano y rostro editorial. Su álbum debut <em>ADONIS</em> (2025) abrió el lenguaje visual con el que hoy las casas de moda lo eligen — sensualidad, austeridad, presencia escultórica. Cinco maisons globales lo han contratado en los últimos tres años para fragancia, moda y beauty. Esta es la temporada en que cruza al runway.</span>
+      <span lang="en">Javier Ferreira is an urban artist and editorial face. His debut album <em>ADONIS</em> (2025) defined the visual language fashion houses now choose him for — sensuality, restraint, sculptural presence. Five global houses have booked him over the past three years for fragrance, fashion and beauty. This is the season he crosses to the runway.</span>
+    </p>
+  </div>
+  <div class="profile-grid reveal">
+    <div class="prow">
+      <div class="pk"><span lang="es">Nombre</span><span lang="en">Name</span></div>
+      <div class="pv hl">Javier Ferreira</div>
+    </div>
+    <div class="prow">
+      <div class="pk"><span lang="es">Origen</span><span lang="en">From</span></div>
+      <div class="pv">Medellín, <em>Colombia</em></div>
+    </div>
+    <div class="prow">
+      <div class="pk"><span lang="es">Estatura</span><span lang="en">Height</span></div>
+      <div class="pv hl">1.95 m · 6'4"</div>
+    </div>
+    <div class="prow">
+      <div class="pk"><span lang="es">Idiomas</span><span lang="en">Speaks</span></div>
+      <div class="pv"><span lang="es">Español <em>nativo</em> · Inglés <em>conversacional</em></span><span lang="en">Spanish <em>native</em> · English <em>conversational</em></span></div>
+    </div>
+    <div class="prow">
+      <div class="pk"><span lang="es">Álbum</span><span lang="en">Album</span></div>
+      <div class="pv"><em>ADONIS</em> · 2025</div>
+    </div>
+    <div class="prow">
+      <div class="pk"><span lang="es">Maisons</span><span lang="en">Houses</span></div>
+      <div class="pv">JPG · Rabanne · Carolina Herrera · Diesel</div>
+    </div>
+    <div class="prow">
+      <div class="pk">Beauty</div>
+      <div class="pv">Kérastase · Head &amp; Shoulders · Nautica · Sears</div>
+    </div>
+    <div class="prow">
+      <div class="pk">Management</div>
+      <div class="pv">Sancor MGMT · <em>boutique</em></div>
+    </div>
+    <div class="prow">
+      <div class="pk"><span lang="es">Medidas</span><span lang="en">Measurements</span></div>
+      <div class="pv"><em><span lang="es">Hoja completa bajo solicitud</span><span lang="en">Full sheet on request</span></em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ VII · INDEX (numbers, footer-ish) ═══════════════════════════ -->
+<section class="index-block" aria-label="Index">
+  <div class="index-inner">
+    <div class="index-head italic">
+      <span lang="es">Índice — Reach &amp; Engagement</span>
+      <span lang="en">Index — Reach &amp; Engagement</span>
+    </div>
+    <div class="index-grid reveal">
+      <div class="idx-cell">
+        <div class="n">3.9M</div>
+        <div class="l">TikTok</div>
+      </div>
+      <div class="idx-cell">
+        <div class="n">145.7M</div>
+        <div class="l"><span lang="es">Impressions</span><span lang="en">Impressions</span></div>
+      </div>
+      <div class="idx-cell">
+        <div class="n">455K</div>
+        <div class="l">Instagram</div>
+      </div>
+      <div class="idx-cell">
+        <div class="n">4.8%</div>
+        <div class="l">Engagement</div>
+      </div>
+    </div>
+    <div class="idx-source">
+      <span lang="es">TikTok Analytics &amp; Instagram Insights · Marzo 2026</span>
+      <span lang="en">TikTok Analytics &amp; Instagram Insights · March 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ VIII · AUDIENCE (compact) ═══════════════════════════ -->
+<section class="aud-block" aria-label="Audience">
+  <div class="sec-no italic">VIII</div>
   <div class="sec-head reveal">
     <div class="sec-tag">
       <span lang="es">Audiencia</span>
       <span lang="en">Audience</span>
     </div>
-    <h2 class="serif">
-      <span lang="es">El público que las casas <em>quieren</em>.</span>
-      <span lang="en">The audience fashion houses <em>want</em>.</span>
+    <h2 class="serif" style="font-size:clamp(28px,7vw,42px)">
+      <span lang="es">Una <em>línea directa</em> al lujo latino.</span>
+      <span lang="en">A <em>direct line</em> into Latin luxury.</span>
     </h2>
     <p>
-      <span lang="es">Hombres y mujeres jóvenes con poder adquisitivo creciente. Línea directa al segmento LATAM + US Hispanic — el de mayor crecimiento en lujo premium 2024-2027.</span>
-      <span lang="en">Young men and women with growing purchasing power. Direct line into LATAM + US Hispanic — the fastest-growing premium luxury segment 2024–2027.</span>
+      <span lang="es">El segmento LATAM + US Hispanic — el de mayor crecimiento en lujo premium 2024-2027.</span>
+      <span lang="en">LATAM + US Hispanic — the fastest-growing premium luxury segment 2024–2027.</span>
     </p>
   </div>
   <div class="aud-row reveal">
@@ -779,85 +960,46 @@ footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;
   </div>
 </section>
 
-<div class="sec-divider"></div>
-
-<!-- ═══════════════════════════ PROFILE ═══════════════════════════ -->
-<section class="sec" aria-label="Profile">
-  <div class="sec-head reveal">
-    <div class="sec-tag">
-      <span lang="es">El artista</span>
-      <span lang="en">The artist</span>
-    </div>
-    <h2 class="serif">
-      <span lang="es">Perfil &amp; <em>track record</em>.</span>
-      <span lang="en">Profile &amp; <em>track record</em>.</span>
-    </h2>
-  </div>
-  <div class="profile-grid reveal">
-    <div class="pcard">
-      <h3>
-        <span lang="es">Perfil</span>
-        <span lang="en">Profile</span>
-      </h3>
-      <div class="row"><span class="k"><span lang="es">Nombre</span><span lang="en">Name</span></span><span class="v hl">Javier Ferreira</span></div>
-      <div class="row"><span class="k"><span lang="es">Origen</span><span lang="en">Origin</span></span><span class="v">Medellín, Colombia</span></div>
-      <div class="row"><span class="k"><span lang="es">Estatura</span><span lang="en">Height</span></span><span class="v hl"><span lang="es">1.95 m</span><span lang="en">6'4" (1.95 m)</span></span></div>
-      <div class="row"><span class="k"><span lang="es">Idiomas</span><span lang="en">Languages</span></span><span class="v"><span lang="es">Español · Inglés</span><span lang="en">Spanish · English</span></span></div>
-      <div class="row"><span class="k"><span lang="es">Disponibilidad</span><span lang="en">Availability</span></span><span class="v">LATAM · USA · EU</span></div>
-      <div class="row"><span class="k">Management</span><span class="v">Sancor MGMT</span></div>
-    </div>
-    <div class="pcard">
-      <h3>
-        <span lang="es">Marcas</span>
-        <span lang="en">Brand experience</span>
-      </h3>
-      <div class="row"><span class="k"><span lang="es">Fragancia</span><span lang="en">Fragrance</span></span><span class="v hl">Rabanne · JPG · C. Herrera</span></div>
-      <div class="row"><span class="k"><span lang="es">Moda</span><span lang="en">Fashion</span></span><span class="v hl">Diesel · Nautica</span></div>
-      <div class="row"><span class="k">Beauty</span><span class="v hl">Kérastase · H&amp;S</span></div>
-      <div class="row"><span class="k">Retail</span><span class="v">Sears</span></div>
-      <div class="row"><span class="k"><span lang="es">Vertical</span><span lang="en">Vertical</span></span><span class="v"><span lang="es">Lujo masculino · Lifestyle</span><span lang="en">Men's luxury · Lifestyle</span></span></div>
-      <div class="row"><span class="k"><span lang="es">Track record</span><span lang="en">Track record</span></span><span class="v hl"><span lang="es">7+ marcas globales</span><span lang="en">7+ global brands</span></span></div>
-    </div>
-  </div>
-</section>
-
-<div class="sec-divider"></div>
-
-<!-- ═══════════════════════════ CTA ═══════════════════════════ -->
+<!-- ═══════════════════════════ IX · CTA ═══════════════════════════ -->
 <section class="cta-block" id="contact" aria-label="Contact">
-  <h2 class="serif">
-    <span lang="es"><em>Hablemos.</em></span>
-    <span lang="en"><em>Let's talk.</em></span>
-  </h2>
-  <p>
-    <span lang="es">Front row, embajadas, editoriales y campañas de marca para Paris Fashion Week, Bogotá Fashion Week y temporada 2026.</span>
-    <span lang="en">Front row, ambassadorships, editorials and brand campaigns for Paris Fashion Week, Bogotá Fashion Week and 2026 season.</span>
-  </p>
-  <a href="mailto:sancor.mgmt@gmail.com?subject=Brand%20Partnership%20%E2%80%94%20Javier%20Ferreira" class="cta-card">
-    <div class="role">Management · Sancor MGMT</div>
-    <div class="name serif">Santiago Anzola</div>
-    <div style="font-size:12.5px;color:var(--text-soft);line-height:1.5">
-      <span lang="es">CEO &amp; Founder<br>Sancor MGMT</span>
-      <span lang="en">CEO &amp; Founder<br>Sancor MGMT</span>
+  <div class="f-bg italic" aria-hidden="true">F</div>
+  <div class="inner">
+    <h2 class="serif">
+      <span lang="es"><em>Hablemos.</em></span>
+      <span lang="en"><em>Let's talk.</em></span>
+    </h2>
+    <p class="lead">
+      <span lang="es">Front row, embajadas, editoriales y campañas — by referral, selectively represented.</span>
+      <span lang="en">Front row, ambassadorships, editorial and campaigns — by referral, selectively represented.</span>
+    </p>
+    <a href="mailto:sancor.mgmt@gmail.com?subject=Re%3A%20Javier%20Ferreira%20%E2%80%94%20PFW%20SS27%20%2F%20BFW%20AW26" class="cta-card">
+      <div class="role">Management — Sancor MGMT</div>
+      <div class="name serif">Santiago Anzola</div>
+      <div class="title-line italic">
+        <span lang="es">CEO &amp; Founder</span>
+        <span lang="en">CEO &amp; Founder</span>
+      </div>
+      <span class="email">sancor.mgmt@gmail.com</span>
+    </a>
+    <div style="margin-top:14px"><a href="https://instagram.com/javiercferreira" target="_blank" rel="noopener" class="cta-card" style="padding:14px 24px;display:inline-block;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris);font-weight:500">@javiercferreira · Instagram</a></div>
+    <div class="cta-tags">
+      <span class="cta-tag"><span lang="es">By referral</span><span lang="en">By referral</span></span>
+      <span class="cta-tag"><span lang="es">Bespoke partnerships</span><span lang="en">Bespoke partnerships</span></span>
+      <span class="cta-tag">NDA available</span>
     </div>
-    <span class="email">sancor.mgmt@gmail.com</span>
-  </a>
-  <div class="cta-tags">
-    <span class="cta-tag"><span lang="es">Respuesta &lt;24h</span><span lang="en">Reply &lt;24h</span></span>
-    <span class="cta-tag"><span lang="es">Bespoke partnerships</span><span lang="en">Bespoke partnerships</span></span>
-    <span class="cta-tag">WhatsApp</span>
   </div>
 </section>
 
 <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
 <footer>
+  <div class="f-seal italic">F</div>
   <div class="sm">Sancor MGMT</div>
   <div class="legal">
-    <span lang="es">Media Kit · 2026 · Todos los derechos reservados</span>
-    <span lang="en">Media Kit · 2026 · All rights reserved</span>
+    <span lang="es">Media Kit · Q2 2026 · Todos los derechos reservados</span>
+    <span lang="en">Media Kit · Q2 2026 · All rights reserved</span>
   </div>
   <div class="pdf-qr print-only">
-    <img src="assets/qr.png" alt="QR" width="90" height="90">
+    <img src="assets/qr.png" alt="QR" width="96" height="96">
     <div class="qr-text">
       <strong>
         <span lang="es">Versión interactiva</span>
@@ -872,7 +1014,7 @@ footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;
 (function(){
   'use strict';
 
-  /* ═══ Lang toggle (URL ?lang= param overrides) ═══ */
+  /* ═══ Lang toggle (URL ?lang= overrides) ═══ */
   var html=document.documentElement;
   var btn=document.getElementById('langToggle');
   function setLang(l){
@@ -882,9 +1024,8 @@ footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;
     try{localStorage.setItem('jf_lang',l);}catch(e){}
   }
   var urlLang=(new URLSearchParams(location.search)).get('lang');
-  if(urlLang==='en'||urlLang==='es'){
-    setLang(urlLang);
-  } else {
+  if(urlLang==='en'||urlLang==='es'){setLang(urlLang);}
+  else{
     var saved;try{saved=localStorage.getItem('jf_lang');}catch(e){}
     if(saved==='en'||saved==='es') setLang(saved);
   }
@@ -892,13 +1033,11 @@ footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;
     setLang(html.getAttribute('data-lang')==='es'?'en':'es');
   });
 
-  /* ═══ Hero video — guarantee autoplay on iOS Safari ═══ */
+  /* ═══ Hero video ═══ */
   var heroVid=document.querySelector('.hero-video');
   if(heroVid){
-    heroVid.muted=true;
-    heroVid.playsInline=true;
-    var p=heroVid.play();
-    if(p && p.catch) p.catch(function(){});
+    heroVid.muted=true;heroVid.playsInline=true;
+    var p=heroVid.play();if(p&&p.catch) p.catch(function(){});
     document.addEventListener('touchstart',function once(){
       heroVid.play().catch(function(){});
       document.removeEventListener('touchstart',once);
@@ -925,21 +1064,34 @@ footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;
     entries.forEach(function(e){
       var v=e.target;
       if(e.isIntersecting && e.intersectionRatio>.45){
-        if(v.paused){
-          var pp=v.play();
-          if(pp && pp.catch) pp.catch(function(){});
-        }
+        if(v.paused){var pp=v.play();if(pp&&pp.catch) pp.catch(function(){});}
       } else {
         if(!v.paused) v.pause();
       }
     });
   },{threshold:[0,.45,1]});
   camVids.forEach(function(v){
-    v.muted=true;
-    v.playsInline=true;
+    v.muted=true;v.playsInline=true;
     vidObs.observe(v);
     v.addEventListener('click',function(){
       if(v.paused) v.play(); else v.pause();
+    });
+  });
+
+  /* ═══ Unmute toggle per video ═══ */
+  document.querySelectorAll('.unmute-btn').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var card=btn.closest('.tt-card');
+      var v=card.querySelector('.campaign-video');
+      // Mute all others first
+      camVids.forEach(function(other){
+        if(other!==v){other.muted=true;}
+      });
+      v.muted=!v.muted;
+      btn.textContent=v.muted?'♪':'♫';
+      btn.style.color=v.muted?'#fff':'var(--gris)';
+      if(v.paused){var pp=v.play();if(pp&&pp.catch) pp.catch(function(){});}
     });
   });
 
