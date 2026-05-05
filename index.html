@@ -437,12 +437,20 @@ footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;
 }
 
 /* ═══ Print ═══ */
+.print-only{display:none}
+.pdf-qr{display:flex;align-items:center;gap:16px;justify-content:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.pdf-qr img{width:90px;height:90px;background:#fff;padding:6px;border-radius:4px}
+.pdf-qr .qr-text{text-align:left;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--text-muted);line-height:1.6}
+.pdf-qr .qr-text strong{display:block;color:var(--text);font-weight:600;margin-bottom:4px;font-size:10px}
 @media print{
   .lang-toggle,.scroll-cue,.tt-carousel,.hero-video{display:none}
+  .print-only{display:block!important}
   body{background:#fff;color:#111}
   .hero,.numbers,.cta-block,footer{background:#fff;color:#111}
   .hero h1,.sec-head h2,.cta-block h2{color:#111}
   .hero{background-image:url('assets/foto1.jpg');background-size:cover}
+  .pdf-qr .qr-text{color:#666}
+  .pdf-qr .qr-text strong{color:#111}
 }
 </style>
 </head>
@@ -848,13 +856,23 @@ footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;
     <span lang="es">Media Kit · 2026 · Todos los derechos reservados</span>
     <span lang="en">Media Kit · 2026 · All rights reserved</span>
   </div>
+  <div class="pdf-qr print-only">
+    <img src="assets/qr.png" alt="QR" width="90" height="90">
+    <div class="qr-text">
+      <strong>
+        <span lang="es">Versión interactiva</span>
+        <span lang="en">Interactive version</span>
+      </strong>
+      sancormgmt-blip.github.io/<br>javier-ferreira-mediakit/
+    </div>
+  </div>
 </footer>
 
 <script>
 (function(){
   'use strict';
 
-  /* ═══ Lang toggle ═══ */
+  /* ═══ Lang toggle (URL ?lang= param overrides) ═══ */
   var html=document.documentElement;
   var btn=document.getElementById('langToggle');
   function setLang(l){
@@ -863,8 +881,13 @@ footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;
     btn.textContent=(l==='es'?'EN':'ES');
     try{localStorage.setItem('jf_lang',l);}catch(e){}
   }
-  var saved;try{saved=localStorage.getItem('jf_lang');}catch(e){}
-  if(saved==='en'||saved==='es') setLang(saved);
+  var urlLang=(new URLSearchParams(location.search)).get('lang');
+  if(urlLang==='en'||urlLang==='es'){
+    setLang(urlLang);
+  } else {
+    var saved;try{saved=localStorage.getItem('jf_lang');}catch(e){}
+    if(saved==='en'||saved==='es') setLang(saved);
+  }
   btn.addEventListener('click',function(){
     setLang(html.getAttribute('data-lang')==='es'?'en':'es');
   });
