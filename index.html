@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<title>Javier Ferreira — Brand Media Kit 2026</title>
+<meta name="description" content="Javier Ferreira — Editorial talent. Already wears Rabanne, JPG, Carolina Herrera. 3.9M TikTok · 455K Instagram. Available for Paris Fashion Week & Bogotá Fashion Week 2026.">
+<meta property="og:title" content="Javier Ferreira — Brand Media Kit 2026">
+<meta property="og:description" content="Already wears Rabanne · JPG · Carolina Herrera · Diesel. 3.9M digital audience meets fashion's front row.">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="assets/foto1.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="1067">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/foto1.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='none' stroke='%23B9BFC4' stroke-width='4'/><text x='50' y='66' text-anchor='middle' font-size='44' font-weight='700' fill='%23B9BFC4' font-family='Georgia,serif'>F</text></svg>">
+<link rel="preload" as="image" href="assets/foto1.jpg" fetchpriority="high">
+<link rel="preload" as="video" href="assets/hero_jpg.mp4" type="video/mp4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#0a0a0a;
+  --bg-2:#111;
+  --surface:#161616;
+  --line:rgba(255,255,255,.08);
+  --line-2:rgba(255,255,255,.16);
+  --text:#e8e8e6;
+  --text-soft:#a8a8a6;
+  --text-muted:#6e6e6c;
+  --white:#fffff5;
+  --gris:#b9bfc4;
+  --rojo:#e81e1e;
+}
+html{scroll-behavior:smooth;background:var(--bg);-webkit-text-size-adjust:100%}
+body{
+  font-family:'Inter',system-ui,-apple-system,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+img,picture,video{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
+
+/* ═══ Bilingual ═══ */
+[data-lang="es"] [lang="en"]{display:none!important}
+[data-lang="en"] [lang="es"]{display:none!important}
+
+/* Type utilities */
+.serif{font-family:'Playfair Display',Georgia,serif}
+.mono{font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:.18em}
+
+/* ═══ Lang toggle ═══ */
+.lang-toggle{
+  position:fixed;top:14px;right:14px;z-index:100;
+  width:54px;height:32px;border:1px solid var(--line-2);border-radius:32px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;letter-spacing:.2em;color:var(--gris);
+  background:rgba(10,10,10,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  font-weight:500;
+}
+.lang-toggle:hover{color:var(--white);border-color:var(--gris)}
+@supports (padding:max(0px)){.lang-toggle{top:max(14px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right))}}
+
+/* ═══ HERO ═══ */
+.hero{
+  position:relative;height:100svh;min-height:560px;
+  overflow:hidden;display:flex;align-items:flex-end;
+  background:#000;
+}
+.hero-video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 25%;
+  z-index:0;
+  animation:slowZoom 22s ease-in-out infinite alternate;
+}
+@keyframes slowZoom{
+  0%{transform:scale(1.0)}
+  100%{transform:scale(1.08)}
+}
+.hero-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 50%,rgba(0,0,0,.92) 100%),
+    radial-gradient(ellipse at 50% 100%,rgba(0,0,0,.6),transparent 70%);
+}
+.hero-content{
+  position:relative;z-index:2;
+  width:100%;padding:0 24px 40px;
+  padding-bottom:max(40px,calc(env(safe-area-inset-bottom) + 28px));
+}
+.hero-eyebrow{
+  font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gris);
+  margin-bottom:14px;font-weight:500;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gris)}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-weight:700;font-size:clamp(48px,15vw,96px);
+  line-height:.92;letter-spacing:-.02em;color:var(--white);
+  margin-bottom:18px;
+}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--gris);display:block}
+.hero-hook{
+  font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gris);font-weight:500;margin-bottom:20px;
+  line-height:1.6;max-width:480px;
+}
+.hero-hook strong{color:var(--white);font-weight:600}
+.hero-tagline{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(15px,4.2vw,20px);color:var(--text);
+  font-weight:400;letter-spacing:.01em;line-height:1.4;
+  margin-bottom:24px;max-width:520px;
+}
+.hero-meta{
+  display:flex;gap:20px;flex-wrap:wrap;
+  font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris);
+  font-weight:500;
+}
+.hero-meta span{display:flex;align-items:center;gap:8px}
+.hero-meta span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gris)}
+.hero-meta span:first-child::before{display:none}
+
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  margin-top:28px;border-top:1px solid var(--line);
+  padding-top:20px;gap:12px;
+}
+.hero-stat{display:flex;flex-direction:column}
+.hero-stat .n{
+  font-family:'Playfair Display',serif;font-weight:700;
+  font-size:clamp(22px,6vw,32px);color:var(--white);line-height:1;
+  letter-spacing:-.02em;
+}
+.hero-stat .l{
+  font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--text-muted);margin-top:6px;font-weight:500;
+}
+
+.scroll-cue{
+  position:absolute;bottom:max(14px,env(safe-area-inset-bottom));left:50%;
+  transform:translateX(-50%);z-index:3;
+  font-size:8px;letter-spacing:.4em;text-transform:uppercase;
+  color:var(--text-muted);display:flex;flex-direction:column;align-items:center;gap:8px;
+  animation:bounce 2s ease-in-out infinite;pointer-events:none;
+}
+.scroll-cue::after{content:'';width:1px;height:20px;background:linear-gradient(180deg,var(--gris),transparent)}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* ═══ SECTIONS ═══ */
+section{position:relative}
+.sec{padding:80px 24px;max-width:1200px;margin:0 auto}
+.sec-head{margin-bottom:32px}
+.sec-tag{
+  font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gris);font-weight:500;margin-bottom:16px;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-tag::before{content:'';width:18px;height:1px;background:var(--gris)}
+.sec-head h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(28px,8vw,52px);font-weight:700;
+  color:var(--white);line-height:1.05;letter-spacing:-.02em;
+  margin-bottom:14px;
+}
+.sec-head h2 em{font-style:italic;color:var(--gris);font-weight:400}
+.sec-head p{
+  font-size:14px;color:var(--text-soft);line-height:1.7;
+  max-width:560px;
+}
+.sec-divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:0 24px}
+
+/* ═══ LOGO WALL ═══ */
+.logos-block{
+  background:linear-gradient(180deg,var(--bg) 0%,#080808 50%,var(--bg) 100%);
+  padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.tier{margin-bottom:48px}
+.tier:last-child{margin-bottom:0}
+.tier-label{
+  text-align:center;font-size:9px;letter-spacing:.4em;text-transform:uppercase;
+  color:var(--text-muted);margin-bottom:28px;font-weight:500;
+}
+.tier-label::before,.tier-label::after{
+  content:'';display:inline-block;width:32px;height:1px;
+  background:var(--line-2);vertical-align:middle;margin:0 14px;
+}
+.logo-row{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:36px 28px;
+  padding:0 32px;align-items:center;justify-items:center;
+  max-width:900px;margin:0 auto;
+}
+.logo-row img{
+  max-height:38px;width:auto;
+  filter:brightness(0) invert(1);
+  opacity:.65;transition:opacity .3s;
+}
+.logo-row.tier-luxury img{max-height:46px;opacity:.78}
+.logo-row img:hover{opacity:1}
+
+/* ═══ EDITORIAL GALLERY ═══ */
+.gallery{padding:0;overflow:hidden}
+.gallery-scroll{
+  display:flex;gap:0;
+  overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.gallery-scroll::-webkit-scrollbar{display:none}
+.gallery-img{
+  flex:0 0 92%;aspect-ratio:3/4;
+  scroll-snap-align:center;
+  background-size:cover;background-position:center;
+  margin:0 4%;border-radius:4px;
+  position:relative;
+}
+.gallery-img:first-child{margin-left:8%}
+.gallery-img:last-child{margin-right:8%}
+.gallery-caption{
+  position:absolute;bottom:14px;left:14px;right:14px;
+  font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--white);font-weight:500;
+  text-shadow:0 2px 12px rgba(0,0,0,.7);
+}
+
+/* ═══ PROMISE CARDS ═══ */
+.promise-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
+.promise{
+  background:linear-gradient(160deg,var(--surface),var(--bg-2));
+  border:1px solid var(--line);border-radius:6px;
+  padding:24px;position:relative;overflow:hidden;
+}
+.promise::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gris),transparent);
+  opacity:.4;
+}
+.promise-num{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:14px;color:var(--gris);margin-bottom:12px;font-weight:400;
+}
+.promise h3{
+  font-family:'Playfair Display',serif;font-size:20px;font-weight:700;
+  color:var(--white);margin-bottom:8px;line-height:1.2;letter-spacing:-.01em;
+}
+.promise p{font-size:13px;color:var(--text-soft);line-height:1.65}
+
+/* ═══ NUMBERS STRIP ═══ */
+.numbers{
+  background:#060606;padding:64px 24px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.numbers-inner{max-width:1200px;margin:0 auto}
+.numbers-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--line);
+  border:1px solid var(--line);
+}
+.num-cell{
+  background:#060606;padding:28px 18px;text-align:center;
+}
+.num-cell .n{
+  font-family:'Playfair Display',serif;font-weight:700;
+  font-size:clamp(28px,8vw,40px);color:var(--white);line-height:1;
+  letter-spacing:-.02em;
+}
+.num-cell .l{
+  font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--text-muted);margin-top:10px;font-weight:500;
+}
+.num-source{
+  text-align:center;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--text-muted);margin-top:20px;
+}
+
+/* ═══ CAMPAIGN VIDEOS (self-hosted MP4) ═══ */
+.tt-carousel{margin:0 -24px;padding:8px 0 24px}
+.tt-track{
+  display:flex;gap:14px;
+  overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  padding:0 24px;
+  scrollbar-width:none;
+}
+.tt-track::-webkit-scrollbar{display:none}
+.tt-card{
+  flex:0 0 80%;max-width:320px;
+  scroll-snap-align:center;
+  background:#000;border:1px solid var(--line);border-radius:8px;
+  overflow:hidden;
+}
+.tt-frame{
+  position:relative;width:100%;aspect-ratio:9/16;background:#000;overflow:hidden;
+}
+.tt-frame video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+}
+.tt-meta{
+  padding:14px 16px;display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid var(--line);
+}
+.tt-meta .b{font-size:14px;color:var(--white);font-weight:600;font-family:'Playfair Display',serif}
+.tt-meta .t{font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris);font-weight:500}
+
+/* ═══ PROFILE CARDS ═══ */
+.profile-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
+.pcard{
+  background:var(--surface);border:1px solid var(--line);border-radius:6px;
+  padding:24px;
+}
+.pcard h3{
+  font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gris);font-weight:500;margin-bottom:16px;
+}
+.pcard .row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);
+  font-size:13px;
+}
+.pcard .row:last-child{border:none}
+.pcard .k{color:var(--text-muted);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;flex-shrink:0}
+.pcard .v{color:var(--text);font-weight:500;text-align:right}
+.pcard .v.hl{color:var(--white)}
+
+/* ═══ AUDIENCE ═══ */
+.aud-row{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
+.aud-card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px}
+.aud-card h3{
+  font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gris);font-weight:500;margin-bottom:18px;
+}
+.bar{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.bar:last-child{margin-bottom:0}
+.bar .bl{font-size:11px;color:var(--text-muted);min-width:84px;text-align:right;font-weight:500}
+.bar .bt{flex:1;height:3px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
+.bar .bf{height:100%;background:linear-gradient(90deg,var(--gris),#e8e8e8);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar .bf.hl{background:linear-gradient(90deg,var(--rojo),#ff6b6b)}
+.bar .bp{font-size:11px;color:var(--text);font-weight:600;min-width:30px}
+.gender-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:12px}
+.gen{text-align:center;padding:18px 8px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+.gen .n{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--white)}
+.gen .l{font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--text-muted);margin-top:6px;font-weight:500}
+
+/* ═══ CTA / CONTACT ═══ */
+.cta-block{
+  text-align:center;padding:80px 24px;
+  background:linear-gradient(180deg,var(--bg),#060606);
+}
+.cta-block h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(32px,9vw,56px);font-weight:700;color:var(--white);
+  letter-spacing:-.02em;margin-bottom:14px;line-height:1.05;
+}
+.cta-block h2 em{font-style:italic;color:var(--gris);font-weight:400}
+.cta-block p{font-size:14px;color:var(--text-soft);max-width:440px;margin:0 auto 32px}
+.cta-card{
+  display:inline-block;text-align:left;
+  border:1px solid var(--line-2);border-radius:8px;padding:28px 32px;
+  background:var(--surface);min-width:280px;
+}
+.cta-card .role{
+  font-size:9px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gris);margin-bottom:8px;font-weight:500;
+}
+.cta-card .role::after{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--rojo);margin-left:10px;vertical-align:middle}
+.cta-card .name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:12px}
+.cta-card .email{
+  display:block;font-size:14px;color:var(--white);
+  letter-spacing:.02em;margin-top:14px;
+  border-top:1px solid var(--line);padding-top:14px;
+}
+.cta-card .email:hover{color:var(--gris)}
+.cta-tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.cta-tag{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--text-muted);padding:6px 14px;border:1px solid var(--line);border-radius:24px;font-weight:500}
+
+/* ═══ FOOTER ═══ */
+footer{
+  text-align:center;padding:36px 24px 28px;
+  border-top:1px solid var(--line);
+  background:#060606;
+}
+footer .legal{font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-muted);font-weight:500;line-height:2}
+footer .sm{font-size:9px;letter-spacing:.28em;color:var(--gris);font-weight:600;margin-bottom:6px;text-transform:uppercase}
+
+/* ═══ REVEAL ═══ */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ═══ TABLET ═══ */
+@media(min-width:640px){
+  .sec{padding:96px 40px}
+  .logo-row{grid-template-columns:repeat(4,1fr);gap:32px;padding:0 24px}
+  .logo-row img{max-height:42px}
+  .logo-row.tier-luxury img{max-height:54px}
+  .promise-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .profile-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .aud-row{grid-template-columns:1fr 1fr;gap:16px}
+  .numbers-grid{grid-template-columns:repeat(4,1fr)}
+  .num-cell{padding:36px 20px}
+  .gallery-img{flex:0 0 60%}
+  .tt-card{flex:0 0 320px}
+  .hero-content{padding:0 40px 56px}
+}
+
+/* ═══ DESKTOP ═══ */
+@media(min-width:1024px){
+  .sec{padding:120px 56px}
+  .hero-content{padding:0 56px 72px}
+  .hero h1{font-size:clamp(80px,11vw,140px)}
+  .hero-stats{max-width:560px;margin-top:36px;padding-top:24px}
+  .promise-grid{grid-template-columns:repeat(3,1fr)}
+  .gallery-img{flex:0 0 38%}
+  .tt-track{padding:0 56px;justify-content:flex-start}
+  .tt-card{flex:0 0 300px}
+  .logos-block{padding:80px 0}
+  .logo-row{padding:0;gap:48px}
+  .logo-row img{max-height:48px}
+  .logo-row.tier-luxury img{max-height:60px}
+}
+
+/* ═══ Reduced motion ═══ */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .hero-video{display:none}
+  .hero{background-image:url('assets/foto1.jpg');background-size:cover;background-position:center 25%}
+}
+
+/* ═══ Print ═══ */
+@media print{
+  .lang-toggle,.scroll-cue,.tt-carousel,.hero-video{display:none}
+  body{background:#fff;color:#111}
+  .hero,.numbers,.cta-block,footer{background:#fff;color:#111}
+  .hero h1,.sec-head h2,.cta-block h2{color:#111}
+  .hero{background-image:url('assets/foto1.jpg');background-size:cover}
+}
+</style>
+</head>
+<body>
+
+<button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN</button>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<header class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/foto1.jpg" aria-hidden="true">
+    <source src="assets/hero_jpg.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Brand Media Kit · 2026</div>
+    <h1 class="serif">
+      Javier<br>
+      <em>Ferreira</em>
+    </h1>
+    <div class="hero-hook">
+      <span lang="es"><strong>Already wears</strong> Rabanne · Jean Paul Gaultier · Carolina Herrera · Diesel</span>
+      <span lang="en"><strong>Already wears</strong> Rabanne · Jean Paul Gaultier · Carolina Herrera · Diesel</span>
+    </div>
+    <p class="hero-tagline">
+      <span lang="es">3.9M-strong digital audience meets fashion's front row.</span>
+      <span lang="en">3.9M-strong digital audience meets fashion's front row.</span>
+    </p>
+    <div class="hero-meta">
+      <span>Medellín · Colombia</span>
+      <span lang="es">1.95 m</span>
+      <span lang="en">6'4"</span>
+      <span>ES · EN</span>
+      <span lang="es">PFW · BFW 2026</span>
+      <span lang="en">PFW · BFW 2026</span>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="n serif">3.9<span style="font-size:.6em;color:var(--gris)">M</span></div>
+        <div class="l">TikTok</div>
+      </div>
+      <div class="hero-stat">
+        <div class="n serif">455<span style="font-size:.6em;color:var(--gris)">K</span></div>
+        <div class="l">Instagram</div>
+      </div>
+      <div class="hero-stat">
+        <div class="n serif">7<span style="font-size:.6em;color:var(--gris)">+</span></div>
+        <div class="l"><span lang="es">Marcas</span><span lang="en">Brands</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Scroll</span>
+  </div>
+</header>
+
+<!-- ═══════════════════════════ LOGO WALL ═══════════════════════════ -->
+<section class="logos-block" aria-label="Brand partners">
+  <div class="tier">
+    <div class="tier-label">
+      <span>Luxury &amp; Fashion</span>
+    </div>
+    <div class="logo-row tier-luxury">
+      <img src="assets/logos/rabanne.png" alt="Rabanne" loading="lazy" decoding="async">
+      <img src="assets/logos/jpg.png" alt="Jean Paul Gaultier" loading="lazy" decoding="async">
+      <img src="assets/logos/carolinaherrera.png" alt="Carolina Herrera" loading="lazy" decoding="async">
+      <img src="assets/logos/diesel.png" alt="Diesel" loading="lazy" decoding="async">
+    </div>
+  </div>
+  <div class="tier">
+    <div class="tier-label">
+      <span>Beauty &amp; Lifestyle</span>
+    </div>
+    <div class="logo-row">
+      <img src="assets/logos/kerastase.png" alt="Kérastase" loading="lazy" decoding="async">
+      <img src="assets/logos/headandshoulders.png" alt="Head &amp; Shoulders" loading="lazy" decoding="async">
+      <img src="assets/logos/nautica.png" alt="Nautica" loading="lazy" decoding="async">
+      <img src="assets/logos/sears.png" alt="Sears" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ EDITORIAL GALLERY ═══════════════════════════ -->
+<section class="sec" aria-label="Editorial">
+  <div class="sec-head reveal">
+    <div class="sec-tag">
+      <span lang="es">Editorial</span>
+      <span lang="en">Editorial</span>
+    </div>
+    <h2 class="serif">
+      <span lang="es">Una <em>estética</em><br>construida.</span>
+      <span lang="en">A built <em>aesthetic</em>.</span>
+    </h2>
+    <p>
+      <span lang="es">Imagen reconocible que ya habla el idioma de las casas de moda. No requiere adaptación: requiere dirección.</span>
+      <span lang="en">A recognizable image that already speaks the language of fashion houses. No adaptation needed — only direction.</span>
+    </p>
+  </div>
+</section>
+
+<div class="gallery">
+  <div class="gallery-scroll" role="list">
+    <div class="gallery-img" role="listitem" style="background-image:url('assets/foto1.jpg')">
+      <div class="gallery-caption">ADONIS · Editorial 01</div>
+    </div>
+    <div class="gallery-img" role="listitem" style="background-image:url('assets/foto2.jpg')">
+      <div class="gallery-caption">Event · Fashion 02</div>
+    </div>
+    <div class="gallery-img" role="listitem" style="background-image:url('assets/foto3.jpg')">
+      <div class="gallery-caption">Portrait · 03</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-divider"></div>
+
+<!-- ═══════════════════════════ FOR FASHION WEEK ═══════════════════════════ -->
+<section class="sec" aria-label="For Fashion Week">
+  <div class="sec-head reveal">
+    <div class="sec-tag">
+      <span lang="es">Para Fashion Week</span>
+      <span lang="en">For Fashion Week</span>
+    </div>
+    <h2 class="serif">
+      <span lang="es">Cómo <em>activar</em><br>su presencia.</span>
+      <span lang="en">How to <em>activate</em><br>his presence.</span>
+    </h2>
+    <p>
+      <span lang="es">Cuatro formatos diseñados para Paris Fashion Week, Bogotá Fashion Week y semanas de moda regionales — adaptables a presupuesto y objetivo de marca.</span>
+      <span lang="en">Four formats built for Paris Fashion Week, Bogotá Fashion Week and regional fashion weeks — adaptable to brand budget and goals.</span>
+    </p>
+  </div>
+  <div class="promise-grid reveal">
+    <div class="promise">
+      <div class="promise-num">01</div>
+      <h3>Front Row</h3>
+      <p>
+        <span lang="es">Asistencia con cobertura nativa: stories en tiempo real, recap editorial y carousel post-show. 4.4M+ audiencia siguiendo desde su feed durante el show.</span>
+        <span lang="en">Attendance with native coverage: real-time stories, editorial recap and post-show carousel. 4.4M+ audience watching live from his feed during the show.</span>
+      </p>
+    </div>
+    <div class="promise">
+      <div class="promise-num">02</div>
+      <h3>Brand Ambassador</h3>
+      <p>
+        <span lang="es">Asociación de temporada como rostro de campaña, presencia en lanzamientos y contenido exclusivo de marca a lo largo del calendario fashion.</span>
+        <span lang="en">Seasonal partnership as campaign face, launch presence and exclusive brand content across the fashion calendar.</span>
+      </p>
+    </div>
+    <div class="promise">
+      <div class="promise-num">03</div>
+      <h3>
+        <span lang="es">Editorial &amp; Lookbook</span>
+        <span lang="en">Editorial &amp; Lookbook</span>
+      </h3>
+      <p>
+        <span lang="es">1.95 m, presencia escultórica y track record probado en editorial de fragancia y moda con Rabanne, JPG, Carolina Herrera y Diesel.</span>
+        <span lang="en">6'4", sculptural presence and proven editorial track record in fragrance and fashion with Rabanne, JPG, Carolina Herrera and Diesel.</span>
+      </p>
+    </div>
+    <div class="promise">
+      <div class="promise-num">04</div>
+      <h3>Runway-Adjacent Content</h3>
+      <p>
+        <span lang="es">Backstage, BTS, look-of-the-day y reels integrados a la estética de la casa. Contenido nativo TikTok / Instagram con métricas reales.</span>
+        <span lang="en">Backstage, BTS, look-of-the-day and reels integrated to the house aesthetic. Native TikTok / Instagram content with real metrics.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ═══════════════════════════ NUMBERS ═══════════════════════════ -->
+<section class="numbers" aria-label="Numbers">
+  <div class="numbers-inner">
+    <div class="sec-head reveal" style="text-align:center;margin-bottom:32px">
+      <div class="sec-tag" style="justify-content:center">
+        <span lang="es">Reach &amp; Engagement</span>
+        <span lang="en">Reach &amp; Engagement</span>
+      </div>
+      <h2 class="serif" style="font-size:clamp(28px,7vw,44px)">
+        <span lang="es"><em>Real reach.</em> Audiencia premium.</span>
+        <span lang="en"><em>Real reach.</em> Premium audience.</span>
+      </h2>
+    </div>
+    <div class="numbers-grid reveal">
+      <div class="num-cell">
+        <div class="n serif">3.9M</div>
+        <div class="l"><span lang="es">TikTok Reach</span><span lang="en">TikTok Reach</span></div>
+      </div>
+      <div class="num-cell">
+        <div class="n serif">145.7M</div>
+        <div class="l"><span lang="es">Total Impressions</span><span lang="en">Total Impressions</span></div>
+      </div>
+      <div class="num-cell">
+        <div class="n serif">455K</div>
+        <div class="l">Instagram</div>
+      </div>
+      <div class="num-cell">
+        <div class="n serif">4.8%</div>
+        <div class="l"><span lang="es">Engagement Rate</span><span lang="en">Engagement Rate</span></div>
+      </div>
+    </div>
+    <div class="num-source">
+      <span lang="es">Fuente: TikTok Analytics &amp; Instagram Insights · Marzo 2026</span>
+      <span lang="en">Source: TikTok Analytics &amp; Instagram Insights · March 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CAMPAIGNS / VIDEOS ═══════════════════════════ -->
+<section class="sec" aria-label="Campaigns">
+  <div class="sec-head reveal">
+    <div class="sec-tag">
+      <span lang="es">Campañas</span>
+      <span lang="en">Campaigns</span>
+    </div>
+    <h2 class="serif">
+      <span lang="es">Casos <em>reales.</em><br>Marcas globales.</span>
+      <span lang="en">Real <em>cases.</em><br>Global brands.</span>
+    </h2>
+    <p>
+      <span lang="es">Cada campaña ejecutada con contenido nativo, alineada a la identidad visual de la casa. Desliza para explorar.</span>
+      <span lang="en">Each campaign executed with native content, aligned to the house visual identity. Swipe to explore.</span>
+    </p>
+  </div>
+</section>
+
+<div class="tt-carousel" aria-label="Campaign videos">
+  <div class="tt-track" role="list">
+    <article class="tt-card" role="listitem">
+      <div class="tt-frame">
+        <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7381938970495601925.jpg">
+          <source src="assets/tt_7381938970495601925.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="tt-meta"><span class="b">Rabanne</span><span class="t"><span lang="es">Fragancia</span><span lang="en">Fragrance</span></span></div>
+    </article>
+    <article class="tt-card" role="listitem">
+      <div class="tt-frame">
+        <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/hero_poster.jpg">
+          <source src="assets/hero_jpg.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="tt-meta"><span class="b">Jean Paul Gaultier</span><span class="t"><span lang="es">Fragancia</span><span lang="en">Fragrance</span></span></div>
+    </article>
+    <article class="tt-card" role="listitem">
+      <div class="tt-frame">
+        <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7257610125764988165.jpg">
+          <source src="assets/tt_7257610125764988165.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="tt-meta"><span class="b">Diesel</span><span class="t"><span lang="es">Moda</span><span lang="en">Fashion</span></span></div>
+    </article>
+    <article class="tt-card" role="listitem">
+      <div class="tt-frame">
+        <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7220902827751673094.jpg">
+          <source src="assets/tt_7220902827751673094.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="tt-meta"><span class="b">Kérastase</span><span class="t">Grooming</span></div>
+    </article>
+    <article class="tt-card" role="listitem">
+      <div class="tt-frame">
+        <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7465771550365453573.jpg">
+          <source src="assets/tt_7465771550365453573.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="tt-meta"><span class="b">Head &amp; Shoulders</span><span class="t">Grooming</span></div>
+    </article>
+    <article class="tt-card" role="listitem">
+      <div class="tt-frame">
+        <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7315110126430539014.jpg">
+          <source src="assets/tt_7315110126430539014.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="tt-meta"><span class="b">Sears × Nautica</span><span class="t">Retail</span></div>
+    </article>
+  </div>
+</div>
+
+<div class="sec-divider"></div>
+
+<!-- ═══════════════════════════ AUDIENCE ═══════════════════════════ -->
+<section class="sec" aria-label="Audience">
+  <div class="sec-head reveal">
+    <div class="sec-tag">
+      <span lang="es">Audiencia</span>
+      <span lang="en">Audience</span>
+    </div>
+    <h2 class="serif">
+      <span lang="es">El público que las casas <em>quieren</em>.</span>
+      <span lang="en">The audience fashion houses <em>want</em>.</span>
+    </h2>
+    <p>
+      <span lang="es">Hombres y mujeres jóvenes con poder adquisitivo creciente. Línea directa al segmento LATAM + US Hispanic — el de mayor crecimiento en lujo premium 2024-2027.</span>
+      <span lang="en">Young men and women with growing purchasing power. Direct line into LATAM + US Hispanic — the fastest-growing premium luxury segment 2024–2027.</span>
+    </p>
+  </div>
+  <div class="aud-row reveal">
+    <div class="aud-card">
+      <h3>
+        <span lang="es">Edad</span>
+        <span lang="en">Age</span>
+      </h3>
+      <div class="bar"><span class="bl">18–24</span><div class="bt"><div class="bf" data-w="45%"></div></div><span class="bp">45%</span></div>
+      <div class="bar"><span class="bl">25–34</span><div class="bt"><div class="bf" data-w="35%"></div></div><span class="bp">35%</span></div>
+      <div class="bar"><span class="bl">35–44</span><div class="bt"><div class="bf" data-w="12%"></div></div><span class="bp">12%</span></div>
+      <div class="bar"><span class="bl">45+</span><div class="bt"><div class="bf" data-w="8%"></div></div><span class="bp">8%</span></div>
+    </div>
+    <div class="aud-card">
+      <h3>
+        <span lang="es">Mercado</span>
+        <span lang="en">Market</span>
+      </h3>
+      <div class="bar"><span class="bl">Colombia</span><div class="bt"><div class="bf hl" data-w="55%"></div></div><span class="bp">55%</span></div>
+      <div class="bar"><span class="bl">México</span><div class="bt"><div class="bf" data-w="15%"></div></div><span class="bp">15%</span></div>
+      <div class="bar"><span class="bl">US Hispanic</span><div class="bt"><div class="bf" data-w="12%"></div></div><span class="bp">12%</span></div>
+      <div class="bar"><span class="bl">LATAM + EU</span><div class="bt"><div class="bf" data-w="18%"></div></div><span class="bp">18%</span></div>
+    </div>
+  </div>
+  <div class="gender-row reveal">
+    <div class="gen"><div class="n serif">62%</div><div class="l"><span lang="es">Hombres</span><span lang="en">Men</span></div></div>
+    <div class="gen"><div class="n serif">38%</div><div class="l"><span lang="es">Mujeres</span><span lang="en">Women</span></div></div>
+    <div class="gen"><div class="n serif">82%</div><div class="l">Mobile</div></div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ═══════════════════════════ PROFILE ═══════════════════════════ -->
+<section class="sec" aria-label="Profile">
+  <div class="sec-head reveal">
+    <div class="sec-tag">
+      <span lang="es">El artista</span>
+      <span lang="en">The artist</span>
+    </div>
+    <h2 class="serif">
+      <span lang="es">Perfil &amp; <em>track record</em>.</span>
+      <span lang="en">Profile &amp; <em>track record</em>.</span>
+    </h2>
+  </div>
+  <div class="profile-grid reveal">
+    <div class="pcard">
+      <h3>
+        <span lang="es">Perfil</span>
+        <span lang="en">Profile</span>
+      </h3>
+      <div class="row"><span class="k"><span lang="es">Nombre</span><span lang="en">Name</span></span><span class="v hl">Javier Ferreira</span></div>
+      <div class="row"><span class="k"><span lang="es">Origen</span><span lang="en">Origin</span></span><span class="v">Medellín, Colombia</span></div>
+      <div class="row"><span class="k"><span lang="es">Estatura</span><span lang="en">Height</span></span><span class="v hl"><span lang="es">1.95 m</span><span lang="en">6'4" (1.95 m)</span></span></div>
+      <div class="row"><span class="k"><span lang="es">Idiomas</span><span lang="en">Languages</span></span><span class="v"><span lang="es">Español · Inglés</span><span lang="en">Spanish · English</span></span></div>
+      <div class="row"><span class="k"><span lang="es">Disponibilidad</span><span lang="en">Availability</span></span><span class="v">LATAM · USA · EU</span></div>
+      <div class="row"><span class="k">Management</span><span class="v">Sancor MGMT</span></div>
+    </div>
+    <div class="pcard">
+      <h3>
+        <span lang="es">Marcas</span>
+        <span lang="en">Brand experience</span>
+      </h3>
+      <div class="row"><span class="k"><span lang="es">Fragancia</span><span lang="en">Fragrance</span></span><span class="v hl">Rabanne · JPG · C. Herrera</span></div>
+      <div class="row"><span class="k"><span lang="es">Moda</span><span lang="en">Fashion</span></span><span class="v hl">Diesel · Nautica</span></div>
+      <div class="row"><span class="k">Beauty</span><span class="v hl">Kérastase · H&amp;S</span></div>
+      <div class="row"><span class="k">Retail</span><span class="v">Sears</span></div>
+      <div class="row"><span class="k"><span lang="es">Vertical</span><span lang="en">Vertical</span></span><span class="v"><span lang="es">Lujo masculino · Lifestyle</span><span lang="en">Men's luxury · Lifestyle</span></span></div>
+      <div class="row"><span class="k"><span lang="es">Track record</span><span lang="en">Track record</span></span><span class="v hl"><span lang="es">7+ marcas globales</span><span lang="en">7+ global brands</span></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ═══════════════════════════ CTA ═══════════════════════════ -->
+<section class="cta-block" id="contact" aria-label="Contact">
+  <h2 class="serif">
+    <span lang="es"><em>Hablemos.</em></span>
+    <span lang="en"><em>Let's talk.</em></span>
+  </h2>
+  <p>
+    <span lang="es">Front row, embajadas, editoriales y campañas de marca para Paris Fashion Week, Bogotá Fashion Week y temporada 2026.</span>
+    <span lang="en">Front row, ambassadorships, editorials and brand campaigns for Paris Fashion Week, Bogotá Fashion Week and 2026 season.</span>
+  </p>
+  <a href="mailto:sancor.mgmt@gmail.com?subject=Brand%20Partnership%20%E2%80%94%20Javier%20Ferreira" class="cta-card">
+    <div class="role">Management · Sancor MGMT</div>
+    <div class="name serif">Santiago Anzola</div>
+    <div style="font-size:12.5px;color:var(--text-soft);line-height:1.5">
+      <span lang="es">CEO &amp; Founder<br>Sancor MGMT</span>
+      <span lang="en">CEO &amp; Founder<br>Sancor MGMT</span>
+    </div>
+    <span class="email">sancor.mgmt@gmail.com</span>
+  </a>
+  <div class="cta-tags">
+    <span class="cta-tag"><span lang="es">Respuesta &lt;24h</span><span lang="en">Reply &lt;24h</span></span>
+    <span class="cta-tag"><span lang="es">Bespoke partnerships</span><span lang="en">Bespoke partnerships</span></span>
+    <span class="cta-tag">WhatsApp</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+  <div class="sm">Sancor MGMT</div>
+  <div class="legal">
+    <span lang="es">Media Kit · 2026 · Todos los derechos reservados</span>
+    <span lang="en">Media Kit · 2026 · All rights reserved</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ═══ Lang toggle ═══ */
+  var html=document.documentElement;
+  var btn=document.getElementById('langToggle');
+  function setLang(l){
+    html.setAttribute('data-lang',l);
+    html.setAttribute('lang',l);
+    btn.textContent=(l==='es'?'EN':'ES');
+    try{localStorage.setItem('jf_lang',l);}catch(e){}
+  }
+  var saved;try{saved=localStorage.getItem('jf_lang');}catch(e){}
+  if(saved==='en'||saved==='es') setLang(saved);
+  btn.addEventListener('click',function(){
+    setLang(html.getAttribute('data-lang')==='es'?'en':'es');
+  });
+
+  /* ═══ Hero video — guarantee autoplay on iOS Safari ═══ */
+  var heroVid=document.querySelector('.hero-video');
+  if(heroVid){
+    heroVid.muted=true;
+    heroVid.playsInline=true;
+    var p=heroVid.play();
+    if(p && p.catch) p.catch(function(){});
+    document.addEventListener('touchstart',function once(){
+      heroVid.play().catch(function(){});
+      document.removeEventListener('touchstart',once);
+    },{passive:true,once:true});
+  }
+
+  /* ═══ Reveal on scroll ═══ */
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        e.target.querySelectorAll('.bf[data-w]').forEach(function(bar,idx){
+          setTimeout(function(){bar.style.width=bar.dataset.w;},120+idx*80);
+        });
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.1,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  /* ═══ Campaign videos: autoplay on scroll, pause off-screen ═══ */
+  var camVids=document.querySelectorAll('.campaign-video');
+  var vidObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      var v=e.target;
+      if(e.isIntersecting && e.intersectionRatio>.45){
+        if(v.paused){
+          var pp=v.play();
+          if(pp && pp.catch) pp.catch(function(){});
+        }
+      } else {
+        if(!v.paused) v.pause();
+      }
+    });
+  },{threshold:[0,.45,1]});
+  camVids.forEach(function(v){
+    v.muted=true;
+    v.playsInline=true;
+    vidObs.observe(v);
+    v.addEventListener('click',function(){
+      if(v.paused) v.play(); else v.pause();
+    });
+  });
+
+  /* ═══ iOS scroll wake ═══ */
+  document.addEventListener('touchstart',function(){},{passive:true});
+
+})();
+</script>
+
+</body>
+</html>
