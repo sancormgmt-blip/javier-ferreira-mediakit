@@ -1,12 +1,12 @@
 # Javier Ferreira — Brand Media Kit 2026
 
-Editorial talent. Available for **Paris Fashion Week** and **Bogotá Fashion Week** 2026.
+Editorial talent. Available for **Paris Fashion Week SS27** and **Bogotá Fashion Week AW26**.
 
 **Live:** https://sancormgmt-blip.github.io/javier-ferreira-mediakit/
 
-Already wears Rabanne · Jean Paul Gaultier · Carolina Herrera · Diesel.
+Wears Jean Paul Gaultier · Rabanne · Carolina Herrera · Diesel.
 
 ---
 
-Management — Sancor MGMT
+Chimbita Records
 sancor.mgmt@gmail.com
