@@ -19,8 +19,19 @@
 <link rel="preload" as="video" href="assets/hero_jpg.mp4" type="video/mp4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/butler/Butler-Free-Rmn.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/butler/Butler-Free-Bd.woff2" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400..900&display=swap">
 <style>
+/* ═══ Butler (brand book oficial) — self-hosted ═══ */
+@font-face{font-family:'Butler';src:url('assets/fonts/butler/Butler-Free-Lgt.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Butler';src:url('assets/fonts/butler/Butler-Free-Rmn.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Butler';src:url('assets/fonts/butler/Butler-Free-Med.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Butler';src:url('assets/fonts/butler/Butler-Free-SBd.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Butler';src:url('assets/fonts/butler/Butler-Free-Bd.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Butler';src:url('assets/fonts/butler/Butler-Free-XBd.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Butler';src:url('assets/fonts/butler/Butler-Free-Blk.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
+
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
   /* Brand book Javier Ferreira (oficial) */
@@ -65,7 +76,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
 [data-lang="en"] [lang="es"]{display:none!important}
 
 /* Type utilities */
-.serif{font-family:'Bodoni Moda',Georgia,'Times New Roman',serif;font-feature-settings:'kern','liga'}
+.serif{font-family:'Butler','Bodoni Moda',Georgia,'Times New Roman',serif;font-feature-settings:'kern','liga'}
 .italic{font-style:italic}
 /* Bodoni Moda optical size axis: bigger size = display variant */
 h1.serif,.cta-h{font-variation-settings:'opsz' 96}
@@ -90,7 +101,7 @@ h2,.sec-head h2{font-variation-settings:'opsz' 72}
 .f-mark{display:inline-flex;align-items:center;justify-content:center}
 .f-mark svg{display:block}
 .f-watermark{
-  position:absolute;font-family:'Bodoni Moda',serif;font-weight:900;
+  position:absolute;font-family:'Butler','Bodoni Moda',serif;font-weight:900;
   color:rgba(255,253,247,.025);
   font-size:clamp(280px,60vw,560px);line-height:.8;letter-spacing:-.05em;
   z-index:1;pointer-events:none;user-select:none;
@@ -106,7 +117,7 @@ h2,.sec-head h2{font-variation-settings:'opsz' 72}
 }
 .f-divider::after{background:linear-gradient(90deg,var(--line-2),transparent)}
 .f-divider .f-icon{
-  font-family:'Bodoni Moda',serif;font-weight:700;font-style:italic;
+  font-family:'Butler','Bodoni Moda',serif;font-weight:700;font-style:italic;
   font-size:32px;color:var(--gris);margin:0 24px;line-height:1;opacity:.55;
 }
 
@@ -135,7 +146,7 @@ h2,.sec-head h2{font-variation-settings:'opsz' 72}
 .hero-watermark{
   position:absolute;z-index:2;pointer-events:none;
   top:18%;right:-8%;
-  font-family:'Bodoni Moda',serif;font-weight:900;font-style:italic;
+  font-family:'Butler','Bodoni Moda',serif;font-weight:900;font-style:italic;
   font-size:clamp(220px,55vw,460px);line-height:.8;
   color:rgba(255,253,247,.04);
   letter-spacing:-.04em;
@@ -155,7 +166,7 @@ h2,.sec-head h2{font-variation-settings:'opsz' 72}
 .hero-issue .left{display:flex;align-items:center;gap:12px}
 .hero-issue .left::before{content:'';width:24px;height:1px;background:var(--gris)}
 .hero h1{
-  font-family:'Bodoni Moda',Georgia,serif;
+  font-family:'Butler','Bodoni Moda',Georgia,serif;
   font-variation-settings:'opsz' 96;
   font-weight:700;font-size:clamp(56px,17vw,128px);
   line-height:.88;letter-spacing:-.015em;color:var(--white);
@@ -174,7 +185,7 @@ h2,.sec-head h2{font-variation-settings:'opsz' 72}
 }
 .hero-hook strong{color:var(--white);font-weight:600}
 .hero-tagline{
-  font-family:'Bodoni Moda',Georgia,serif;font-style:italic;
+  font-family:'Butler','Bodoni Moda',Georgia,serif;font-style:italic;
   font-size:clamp(15px,4.4vw,21px);color:var(--text);
   font-weight:400;letter-spacing:.005em;line-height:1.45;
   margin-bottom:24px;max-width:540px;
@@ -200,7 +211,7 @@ h2,.sec-head h2{font-variation-settings:'opsz' 72}
 .scroll-cue{
   position:absolute;bottom:max(16px,env(safe-area-inset-bottom));left:50%;
   transform:translateX(-50%);z-index:4;
-  font-family:'Bodoni Moda',serif;font-style:italic;
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;
   font-size:11px;letter-spacing:.18em;
   color:var(--text-muted);display:flex;flex-direction:column;align-items:center;gap:10px;
   animation:bounce 2.4s ease-in-out infinite;pointer-events:none;
@@ -212,7 +223,7 @@ h2,.sec-head h2{font-variation-settings:'opsz' 72}
 section{position:relative}
 .sec{padding:84px 24px;max-width:1200px;margin:0 auto;position:relative}
 .sec-no{
-  font-family:'Bodoni Moda',serif;font-weight:400;font-style:italic;
+  font-family:'Butler','Bodoni Moda',serif;font-weight:400;font-style:italic;
   font-size:14px;color:var(--gris);margin-bottom:8px;letter-spacing:.04em;opacity:.7;
 }
 .sec-head{margin-bottom:36px;position:relative}
@@ -224,14 +235,14 @@ section{position:relative}
 }
 .sec-tag::before{content:'';width:18px;height:1px;background:var(--gris)}
 .sec-head h2{
-  font-family:'Bodoni Moda',serif;
+  font-family:'Butler','Bodoni Moda',serif;
   font-size:clamp(32px,9vw,60px);font-weight:800;
   color:var(--white);line-height:1.0;letter-spacing:-.025em;
   margin-bottom:16px;text-transform:uppercase;
 }
 .sec-head h2 em{font-style:italic;color:var(--gris);font-weight:400;text-transform:none}
 .sec-head p{
-  font-family:'Bodoni Moda',serif;font-style:italic;
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;
   font-size:15.5px;color:var(--text-soft);line-height:1.7;
   max-width:580px;font-weight:400;
 }
@@ -258,7 +269,7 @@ section{position:relative}
 .gallery-img:last-child{margin-right:4%}
 .gallery-num{
   position:absolute;top:18px;left:18px;
-  font-family:'Bodoni Moda',serif;font-style:italic;font-weight:400;
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;font-weight:400;
   font-size:32px;color:var(--white);
   text-shadow:0 2px 16px rgba(0,0,0,.7);
   letter-spacing:-.02em;
@@ -300,10 +311,10 @@ section{position:relative}
 }
 .tt-meta .b{
   font-size:18px;color:var(--white);font-weight:700;
-  font-family:'Bodoni Moda',serif;display:block;letter-spacing:-.01em;
+  font-family:'Butler','Bodoni Moda',serif;display:block;letter-spacing:-.01em;
 }
 .tt-meta .t{
-  font-family:'Bodoni Moda',serif;font-style:italic;
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;
   font-size:12px;color:var(--gris);font-weight:400;margin-top:2px;display:block;
 }
 .unmute-btn{
@@ -324,7 +335,7 @@ section{position:relative}
   position:relative;overflow:hidden;
 }
 .tier-label{
-  text-align:center;font-family:'Bodoni Moda',serif;font-style:italic;
+  text-align:center;font-family:'Butler','Bodoni Moda',serif;font-style:italic;
   font-size:14px;color:var(--text-muted);margin-bottom:42px;font-weight:400;
 }
 .tier-label::before,.tier-label::after{
@@ -351,7 +362,7 @@ section{position:relative}
   position:relative;
 }
 .case-study .quote{
-  font-family:'Bodoni Moda',serif;font-weight:400;font-style:italic;
+  font-family:'Butler','Bodoni Moda',serif;font-weight:400;font-style:italic;
   font-size:clamp(20px,5vw,30px);line-height:1.4;color:var(--white);
   letter-spacing:-.01em;margin-bottom:24px;
 }
@@ -381,7 +392,7 @@ section{position:relative}
   padding-top:6px;
 }
 .available-row .av-content{
-  font-family:'Bodoni Moda',serif;font-weight:400;
+  font-family:'Butler','Bodoni Moda',serif;font-weight:400;
   font-size:18px;color:var(--white);line-height:1.45;letter-spacing:-.005em;
 }
 .available-row .av-content em{color:var(--gris);font-style:italic;font-weight:400}
@@ -404,13 +415,13 @@ section{position:relative}
   text-transform:uppercase;color:var(--text-muted);font-weight:500;
 }
 .prow .pv{
-  font-family:'Bodoni Moda',serif;font-weight:400;
+  font-family:'Butler','Bodoni Moda',serif;font-weight:400;
   font-size:16px;color:var(--text);line-height:1.5;letter-spacing:-.005em;
 }
 .prow .pv.hl{color:var(--white)}
 .prow .pv em{color:var(--gris);font-style:italic}
 .profile-bio{
-  font-family:'Bodoni Moda',serif;font-weight:400;font-style:italic;
+  font-family:'Butler','Bodoni Moda',serif;font-weight:400;font-style:italic;
   font-size:clamp(16px,4vw,20px);line-height:1.7;color:var(--text-soft);
   max-width:680px;margin:24px 0 8px;letter-spacing:-.005em;
 }
@@ -422,7 +433,7 @@ section{position:relative}
 }
 .index-inner{max-width:1200px;margin:0 auto}
 .index-head{
-  font-family:'Bodoni Moda',serif;font-style:italic;font-weight:400;
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;font-weight:400;
   font-size:13px;color:var(--text-muted);text-align:center;margin-bottom:28px;
 }
 .index-grid{
@@ -434,7 +445,7 @@ section{position:relative}
   background:#0a0806;padding:24px 16px;text-align:center;
 }
 .idx-cell .n{
-  font-family:'Bodoni Moda',serif;font-weight:700;
+  font-family:'Butler','Bodoni Moda',serif;font-weight:700;
   font-size:clamp(24px,7vw,34px);color:var(--white);line-height:1;
   letter-spacing:-.02em;
 }
@@ -444,7 +455,7 @@ section{position:relative}
   color:var(--text-muted);margin-top:10px;font-weight:500;
 }
 .idx-source{
-  text-align:center;font-family:'Bodoni Moda',serif;font-style:italic;
+  text-align:center;font-family:'Butler','Bodoni Moda',serif;font-style:italic;
   font-size:10.5px;color:var(--text-muted);margin-top:18px;font-weight:400;
 }
 
@@ -459,14 +470,14 @@ section{position:relative}
 }
 .bar{display:flex;align-items:center;gap:14px;margin-bottom:11px}
 .bar:last-child{margin-bottom:0}
-.bar .bl{font-family:'Bodoni Moda',serif;font-style:italic;font-size:13px;color:var(--text-soft);min-width:96px;text-align:right;font-weight:400}
+.bar .bl{font-family:'Butler','Bodoni Moda',serif;font-style:italic;font-size:13px;color:var(--text-soft);min-width:96px;text-align:right;font-weight:400}
 .bar .bt{flex:1;height:1px;background:rgba(255,253,247,.08);overflow:hidden}
 .bar .bf{height:100%;background:linear-gradient(90deg,var(--gris),#e8e6e0);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
 .bar .bf.hl{background:linear-gradient(90deg,var(--bronce),var(--gris))}
 .bar .bp{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;color:var(--text);font-weight:600;min-width:34px;letter-spacing:.04em}
 .gender-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
 .gen{text-align:center}
-.gen .n{font-family:'Bodoni Moda',serif;font-size:30px;font-weight:700;color:var(--white);line-height:1}
+.gen .n{font-family:'Butler','Bodoni Moda',serif;font-size:30px;font-weight:700;color:var(--white);line-height:1}
 .gen .l{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-muted);margin-top:8px;font-weight:500}
 
 /* ═══ CTA / CONTACT ═══ */
@@ -477,20 +488,20 @@ section{position:relative}
 }
 .cta-block .f-bg{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  font-family:'Bodoni Moda',serif;font-weight:900;font-style:italic;
+  font-family:'Butler','Bodoni Moda',serif;font-weight:900;font-style:italic;
   font-size:clamp(280px,55vw,500px);line-height:.85;
   color:rgba(255,253,247,.022);letter-spacing:-.06em;
   pointer-events:none;
 }
 .cta-block .inner{position:relative;z-index:2}
 .cta-block h2{
-  font-family:'Bodoni Moda',serif;
+  font-family:'Butler','Bodoni Moda',serif;
   font-size:clamp(36px,10vw,72px);font-weight:800;color:var(--white);
   letter-spacing:-.025em;margin-bottom:18px;line-height:1.0;text-transform:uppercase;
 }
 .cta-block h2 em{font-style:italic;color:var(--gris);font-weight:400;text-transform:none}
 .cta-block .lead{
-  font-family:'Bodoni Moda',serif;font-style:italic;font-weight:400;
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;font-weight:400;
   font-size:16px;color:var(--text-soft);max-width:520px;margin:0 auto 36px;line-height:1.6;
 }
 .cta-card{
@@ -504,9 +515,9 @@ section{position:relative}
   font-size:9px;letter-spacing:.36em;text-transform:uppercase;
   color:var(--gris);margin-bottom:12px;font-weight:500;
 }
-.cta-card .name{font-family:'Bodoni Moda',serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:8px;letter-spacing:-.01em}
+.cta-card .name{font-family:'Butler','Bodoni Moda',serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:8px;letter-spacing:-.01em}
 .cta-card .title-line{
-  font-family:'Bodoni Moda',serif;font-style:italic;
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;
   font-size:13.5px;color:var(--text-soft);font-weight:400;margin-bottom:20px;
 }
 .cta-card .email{
@@ -536,7 +547,7 @@ footer{
   background:#0a0806;position:relative;
 }
 footer .f-seal{
-  font-family:'Bodoni Moda',serif;font-style:italic;font-weight:700;
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;font-weight:700;
   font-size:24px;color:var(--gris);opacity:.4;margin-bottom:14px;
   display:inline-block;line-height:1;
 }
@@ -597,7 +608,7 @@ footer .sm{
 .pdf-qr{display:flex;align-items:center;gap:18px;justify-content:center;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
 .pdf-qr img{width:96px;height:96px;background:#fff;padding:6px}
 .pdf-qr .qr-text{text-align:left;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--text-muted);line-height:1.7}
-.pdf-qr .qr-text strong{display:block;color:var(--text);font-weight:600;margin-bottom:5px;font-size:10px;font-family:'Bodoni Moda',serif;font-style:italic;letter-spacing:.04em;text-transform:none}
+.pdf-qr .qr-text strong{display:block;color:var(--text);font-weight:600;margin-bottom:5px;font-size:10px;font-family:'Butler','Bodoni Moda',serif;font-style:italic;letter-spacing:.04em;text-transform:none}
 @media print{
   body::before{display:none}
   .lang-toggle,.scroll-cue,.tt-carousel,.hero-video,.unmute-btn{display:none}
