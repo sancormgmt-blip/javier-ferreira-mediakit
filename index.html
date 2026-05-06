@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="assets/foto1.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='none' stroke='%23B9BFC4' stroke-width='4'/><text x='50' y='66' text-anchor='middle' font-size='44' font-weight='700' fill='%23B9BFC4' font-family='Georgia,serif'>F</text></svg>">
 <link rel="preload" as="image" href="assets/foto1.jpg" fetchpriority="high">
-<link rel="preload" as="image" href="assets/foto3.jpg">
+<link rel="preload" as="video" href="assets/hero_jpg.mp4" type="video/mp4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap">
@@ -108,19 +108,16 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
   overflow:hidden;display:flex;align-items:flex-end;
   background:#000;
 }
-.hero-bg{position:absolute;inset:0;z-index:0;display:flex}
-.hero-slide{
-  position:absolute;inset:0;
-  background-size:cover;background-position:center 25%;
-  opacity:0;transition:opacity 1.4s ease;
-  animation:kenBurns 14s ease-in-out infinite alternate;
+.hero-video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 25%;
+  z-index:0;
+  animation:slowZoom 24s ease-in-out infinite alternate;
 }
-.hero-slide.active{opacity:1}
-@keyframes kenBurns{
-  0%{transform:scale(1.05) translate(0,0)}
-  100%{transform:scale(1.18) translate(-1%,-2%)}
+@keyframes slowZoom{
+  0%{transform:scale(1.0)}
+  100%{transform:scale(1.07)}
 }
-.hero-video{display:none}
 .hero-overlay{
   position:absolute;inset:0;z-index:1;
   background:
@@ -572,8 +569,8 @@ footer .sm{
 /* ═══ Reduced motion ═══ */
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
-  .hero-slide{opacity:1}
-  .hero-slide:not(.active){display:none}
+  .hero-video{display:none}
+  .hero{background-image:url('assets/foto1.jpg');background-size:cover;background-position:center 25%}
 }
 
 /* ═══ Print ═══ */
@@ -601,11 +598,9 @@ footer .sm{
 
 <!-- ═══════════════════════════ I · HERO ═══════════════════════════ -->
 <header class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="hero-slide active" style="background-image:url('assets/foto1.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('assets/foto3.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('assets/foto2.jpg')"></div>
-  </div>
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/foto1.jpg" aria-hidden="true">
+    <source src="assets/hero_jpg.mp4" type="video/mp4">
+  </video>
   <div class="hero-overlay"></div>
   <div class="hero-watermark italic" aria-hidden="true">F</div>
   <div class="hero-content">
@@ -1038,15 +1033,15 @@ footer .sm{
     setLang(html.getAttribute('data-lang')==='es'?'en':'es');
   });
 
-  /* ═══ Hero slideshow Ken Burns ═══ */
-  var slides=document.querySelectorAll('.hero-slide');
-  if(slides.length>1){
-    var i=0;
-    setInterval(function(){
-      slides[i].classList.remove('active');
-      i=(i+1)%slides.length;
-      slides[i].classList.add('active');
-    },5500);
+  /* ═══ Hero video ═══ */
+  var heroVid=document.querySelector('.hero-video');
+  if(heroVid){
+    heroVid.muted=true;heroVid.playsInline=true;
+    var p=heroVid.play();if(p&&p.catch) p.catch(function(){});
+    document.addEventListener('touchstart',function once(){
+      heroVid.play().catch(function(){});
+      document.removeEventListener('touchstart',once);
+    },{passive:true,once:true});
   }
 
   /* ═══ Reveal on scroll ═══ */
