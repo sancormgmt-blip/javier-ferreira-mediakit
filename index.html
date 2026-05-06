@@ -49,6 +49,8 @@
   --text-soft:#B9BFC4;
   --text-muted:#6e6a60;
   --white:#FFFFF5;
+  /* Chimbita Records (sello de Javier) */
+  --chimbita-rojo:#E81E1E;
 }
 html{scroll-behavior:smooth;background:var(--bg);-webkit-text-size-adjust:100%}
 body{
@@ -521,26 +523,47 @@ section{position:relative}
 }
 .cta-tag:last-child{border-right:1px solid var(--line)}
 
-/* ═══ FOOTER ═══ */
+/* ═══ FOOTER (Chimbita Records) ═══ */
 footer{
-  text-align:center;padding:36px 24px 28px;
+  text-align:center;padding:64px 24px 36px;
   border-top:1px solid var(--line);
   background:#0a0806;position:relative;
 }
-footer .f-seal{
-  font-family:'Butler','Bodoni Moda',serif;font-style:italic;font-weight:700;
-  font-size:24px;color:var(--gris);opacity:.4;margin-bottom:14px;
-  display:inline-block;line-height:1;
+footer::before{
+  content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:48px;height:2px;background:var(--chimbita-rojo);
 }
+.foot-mark{
+  display:flex;align-items:center;justify-content:center;gap:18px;
+  margin-bottom:14px;
+}
+.foot-mark img{
+  height:48px;width:auto;
+  filter:brightness(0) invert(1);
+  opacity:.85;
+}
+.foot-mark .pipe{width:1px;height:24px;background:var(--line-2)}
+.foot-mark .label{
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:11px;letter-spacing:.36em;text-transform:uppercase;
+  color:var(--white);font-weight:600;
+}
+.foot-tagline{
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;font-weight:400;
+  font-size:13px;color:var(--gris);opacity:.7;margin-bottom:20px;letter-spacing:.04em;
+}
+.foot-tagline strong{
+  color:var(--chimbita-rojo);font-style:normal;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;font-size:10px;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;display:block;margin-bottom:4px;
+}
+footer .f-seal{display:none}
 footer .legal{
   font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;
   color:var(--text-muted);font-weight:500;line-height:2
 }
-footer .sm{
-  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
-  font-size:9px;letter-spacing:.32em;color:var(--gris);font-weight:600;
-  margin-bottom:6px;text-transform:uppercase
+footer .sm{display:none
 }
 
 /* ═══ REVEAL ═══ */
@@ -887,8 +910,12 @@ footer .sm{
       <div class="pv">Sears</div>
     </div>
     <div class="prow">
+      <div class="pk"><span lang="es">Sello</span><span lang="en">Label</span></div>
+      <div class="pv hl">Chimbita Records</div>
+    </div>
+    <div class="prow">
       <div class="pk">Management</div>
-      <div class="pv">Chimbita Records · <em>boutique</em></div>
+      <div class="pv">Sancor MGMT · <em>boutique</em></div>
     </div>
     <div class="prow">
       <div class="pk"><span lang="es">Medidas</span><span lang="en">Measurements</span></div>
@@ -986,11 +1013,11 @@ footer .sm{
       <span lang="en">Front row, ambassadorships, editorial and campaigns — by referral, selectively represented.</span>
     </p>
     <a href="mailto:sancor.mgmt@gmail.com?subject=Re%3A%20Javier%20Ferreira%20%E2%80%94%20PFW%20SS27%20%2F%20BFW%20AW26" class="cta-card">
-      <div class="role">Management — Chimbita Records</div>
+      <div class="role">Management</div>
       <div class="name serif">Santiago Anzola</div>
       <div class="title-line italic">
-        <span lang="es">Founder · Chimbita Records</span>
-        <span lang="en">Founder · Chimbita Records</span>
+        <span lang="es">Sancor MGMT · <em>boutique management</em></span>
+        <span lang="en">Sancor MGMT · <em>boutique management</em></span>
       </div>
       <span class="email">sancor.mgmt@gmail.com</span>
     </a>
@@ -1003,10 +1030,18 @@ footer .sm{
   </div>
 </section>
 
-<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<!-- ═══════════════════════════ FOOTER (Chimbita Records) ═══════════════════════════ -->
 <footer>
-  <div class="f-seal italic">F</div>
-  <div class="sm">Chimbita Records</div>
+  <div class="foot-mark">
+    <img src="assets/logos/chimbita_records.png" alt="Chimbita Records">
+    <span class="pipe"></span>
+    <span class="label">Chimbita Records</span>
+  </div>
+  <div class="foot-tagline">
+    <strong>El vibe no miente</strong>
+    <span lang="es">Todo melo, siempre Chimbita.</span>
+    <span lang="en">Todo melo, siempre Chimbita.</span>
+  </div>
   <div class="legal">
     <span lang="es">Media Kit · Q2 2026 · Todos los derechos reservados</span>
     <span lang="en">Media Kit · Q2 2026 · All rights reserved</span>
