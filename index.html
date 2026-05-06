@@ -9,11 +9,11 @@
 <meta property="og:title" content="Javier Ferreira — Brand Media Kit 2026">
 <meta property="og:description" content="Se abren las puertas del cielo. Wears Jean Paul Gaultier · Rabanne · Carolina Herrera · Diesel.">
 <meta property="og:type" content="profile">
-<meta property="og:image" content="assets/foto1.jpg">
+<meta property="og:image" content="https://sancormgmt-blip.github.io/javier-ferreira-mediakit/assets/foto1.jpg">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="1067">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="assets/foto1.jpg">
+<meta name="twitter:image" content="https://sancormgmt-blip.github.io/javier-ferreira-mediakit/assets/foto1.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='none' stroke='%23B9BFC4' stroke-width='4'/><text x='50' y='66' text-anchor='middle' font-size='44' font-weight='700' fill='%23B9BFC4' font-family='Georgia,serif'>F</text></svg>">
 <link rel="preload" as="image" href="assets/foto1.jpg" fetchpriority="high">
 <link rel="preload" as="video" href="assets/hero_jpg.mp4" type="video/mp4">
@@ -60,13 +60,6 @@ body{
   position:relative;
 }
 
-/* ═══ Film grain overlay (editorial texture) ═══ */
-body::before{
-  content:'';position:fixed;inset:0;z-index:200;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  opacity:.4;mix-blend-mode:overlay;
-}
-
 img,picture,video{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
@@ -97,28 +90,16 @@ h2,.sec-head h2{font-variation-settings:'opsz' 72}
 .lang-toggle:hover{color:var(--white);border-color:var(--gris)}
 @supports (padding:max(0px)){.lang-toggle{top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right))}}
 
-/* ═══ F monogram (recurring signature) ═══ */
-.f-mark{display:inline-flex;align-items:center;justify-content:center}
-.f-mark svg{display:block}
-.f-watermark{
-  position:absolute;font-family:'Butler','Bodoni Moda',serif;font-weight:900;
-  color:rgba(255,253,247,.025);
-  font-size:clamp(280px,60vw,560px);line-height:.8;letter-spacing:-.05em;
-  z-index:1;pointer-events:none;user-select:none;
-  bottom:-8%;right:-6%;font-style:italic;
+/* ═══ Mythology divider (símbolos brand book: columna · laurel · casco) ═══ */
+.mythology-divider{
+  display:flex;align-items:center;justify-content:center;gap:36px;
+  padding:64px 24px;color:var(--gris);opacity:.5;
 }
-.f-divider{
-  display:flex;align-items:center;justify-content:center;
-  padding:48px 24px;position:relative;
-}
-.f-divider::before,.f-divider::after{
-  content:'';flex:1;max-width:80px;height:1px;
-  background:linear-gradient(90deg,transparent,var(--line-2));
-}
-.f-divider::after{background:linear-gradient(90deg,var(--line-2),transparent)}
-.f-divider .f-icon{
-  font-family:'Butler','Bodoni Moda',serif;font-weight:700;font-style:italic;
-  font-size:32px;color:var(--gris);margin:0 24px;line-height:1;opacity:.55;
+.myth-stamp{display:inline-flex;align-items:center;justify-content:center}
+.myth-stamp svg{width:44px;height:44px;display:block}
+@media(min-width:640px){
+  .mythology-divider{gap:56px;padding:80px 24px}
+  .myth-stamp svg{width:56px;height:56px}
 }
 
 /* ═══ HERO ═══ */
@@ -626,52 +607,34 @@ footer .sm{
 
 <button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN</button>
 
-<!-- ═══════════════════════════ I · HERO ═══════════════════════════ -->
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
 <header class="hero" id="top">
   <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/foto1.jpg" aria-hidden="true">
     <source src="assets/hero_jpg.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
-  <div class="hero-watermark italic" aria-hidden="true">F</div>
   <div class="hero-content">
-    <div class="hero-issue">
-      <span class="left">Issue · 2026</span>
-      <span>Brand Media Kit</span>
-    </div>
     <h1 class="serif">
       Javier<br>
       <em>Ferreira</em>
     </h1>
-    <div class="hero-hook">
-      <strong>Wears</strong> Jean Paul Gaultier · Rabanne · Carolina Herrera · Diesel
-    </div>
     <p class="hero-tagline">
       <span lang="es">Se abren las puertas del cielo.</span>
       <span lang="en">The gates of heaven open.</span>
     </p>
-    <div class="hero-keywords">
-      <span><span lang="es">Sensualidad</span><span lang="en">Sensuality</span></span>
-      <span><span lang="es">Elegante</span><span lang="en">Elegance</span></span>
-      <span><span lang="es">Provocador</span><span lang="en">Provocateur</span></span>
-      <span><span lang="es">Belleza</span><span lang="en">Beauty</span></span>
-    </div>
     <div class="hero-meta">
       <span>Medellín</span>
-      <span lang="es">1.95 m · 6'4"</span>
-      <span lang="en">6'4" · 1.95 m</span>
+      <span lang="es">1.95 m</span>
+      <span lang="en">6'4"</span>
       <span>ES · EN</span>
     </div>
   </div>
   <div class="scroll-cue serif italic" aria-hidden="true">i</div>
 </header>
 
-<!-- ═══════════════════════════ F divider ═══════════════════════════ -->
-<div class="f-divider" aria-hidden="true"><span class="f-icon">F</span></div>
-
 <!-- ═══════════════════════════ II · EDITORIAL SPREAD ═══════════════════════════ -->
 <section aria-label="Editorial">
   <div class="sec">
-    <div class="sec-no italic">II</div>
     <div class="sec-head reveal">
       <div class="sec-tag">
         <span lang="es">Editorial</span>
@@ -706,21 +669,55 @@ footer .sm{
   </div>
 </div>
 
-<!-- ═══════════════════════════ F divider ═══════════════════════════ -->
-<div class="f-divider" aria-hidden="true"><span class="f-icon">F</span></div>
+<!-- ═══════════════════════════ Mythology divider ═══════════════════════════ -->
+<div class="mythology-divider" aria-hidden="true">
+  <span class="myth-stamp" title="Columna">
+    <svg viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1"/>
+      <line x1="18" y1="14" x2="42" y2="14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="20" y1="18" x2="40" y2="18" stroke="currentColor" stroke-width=".8" stroke-linecap="round"/>
+      <line x1="24" y1="22" x2="24" y2="42" stroke="currentColor" stroke-width=".8" stroke-linecap="round"/>
+      <line x1="30" y1="22" x2="30" y2="42" stroke="currentColor" stroke-width=".8" stroke-linecap="round"/>
+      <line x1="36" y1="22" x2="36" y2="42" stroke="currentColor" stroke-width=".8" stroke-linecap="round"/>
+      <line x1="20" y1="42" x2="40" y2="42" stroke="currentColor" stroke-width=".8" stroke-linecap="round"/>
+      <line x1="18" y1="46" x2="42" y2="46" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+  </span>
+  <span class="myth-stamp" title="Laurel">
+    <svg viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1"/>
+      <path d="M 18 44 Q 12 30 18 16" fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round"/>
+      <path d="M 42 44 Q 48 30 42 16" fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round"/>
+      <ellipse cx="13" cy="22" rx="3" ry="1.2" fill="currentColor" transform="rotate(-35 13 22)"/>
+      <ellipse cx="13" cy="30" rx="3" ry="1.2" fill="currentColor" transform="rotate(-15 13 30)"/>
+      <ellipse cx="15" cy="38" rx="3" ry="1.2" fill="currentColor" transform="rotate(0 15 38)"/>
+      <ellipse cx="47" cy="22" rx="3" ry="1.2" fill="currentColor" transform="rotate(35 47 22)"/>
+      <ellipse cx="47" cy="30" rx="3" ry="1.2" fill="currentColor" transform="rotate(15 47 30)"/>
+      <ellipse cx="45" cy="38" rx="3" ry="1.2" fill="currentColor" transform="rotate(0 45 38)"/>
+      <line x1="26" y1="46" x2="34" y2="46" stroke="currentColor" stroke-width=".9" stroke-linecap="round"/>
+    </svg>
+  </span>
+  <span class="myth-stamp" title="Casco espartano">
+    <svg viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1"/>
+      <path d="M 16 18 Q 30 13 44 18 L 44 24 L 16 24 Z" fill="none" stroke="currentColor" stroke-width=".9" stroke-linejoin="round"/>
+      <path d="M 17 24 L 17 38 Q 18 46 22 48 L 22 44 L 38 44 L 38 48 Q 42 46 43 38 L 43 24" fill="none" stroke="currentColor" stroke-width=".9" stroke-linejoin="round"/>
+      <path d="M 22 30 L 38 30 L 38 33 L 32 33 L 32 40 L 28 40 L 28 33 L 22 33 Z" fill="none" stroke="currentColor" stroke-width=".9" stroke-linejoin="round"/>
+    </svg>
+  </span>
+</div>
 
-<!-- ═══════════════════════════ III · FILMS ═══════════════════════════ -->
+<!-- ═══════════════════════════ FILMS ═══════════════════════════ -->
 <section aria-label="Films">
   <div class="films-intro">
-    <div class="sec-no italic">III</div>
     <div class="sec-head reveal">
       <div class="sec-tag">
         <span lang="es">Selected work · 2023 / 26</span>
         <span lang="en">Selected work · 2023 / 26</span>
       </div>
       <h2 class="serif">
-        <span lang="es">Cinco <em>maisons.</em><br>Una firma.</span>
-        <span lang="en">Five <em>houses.</em><br>One signature.</span>
+        <span lang="es">Cuatro <em>maisons.</em><br>Una firma.</span>
+        <span lang="en">Four <em>houses.</em><br>One signature.</span>
       </h2>
       <p>
         <span lang="es">Cada campaña ejecutada con contenido nativo, alineada a la identidad visual de la casa.</span>
@@ -768,29 +765,8 @@ footer .sm{
       </div>
       <div class="tt-meta"><span class="b">Kérastase</span><span class="t italic">Beauty</span></div>
     </article>
-    <article class="tt-card" role="listitem">
-      <div class="tt-frame">
-        <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7465771550365453573.jpg">
-          <source src="assets/tt_7465771550365453573.mp4" type="video/mp4">
-        </video>
-        <button class="unmute-btn" aria-label="Toggle sound">♪</button>
-      </div>
-      <div class="tt-meta"><span class="b">Head &amp; Shoulders</span><span class="t italic">Beauty</span></div>
-    </article>
-    <article class="tt-card" role="listitem">
-      <div class="tt-frame">
-        <video class="campaign-video" muted loop playsinline preload="metadata" poster="assets/poster_tt_7315110126430539014.jpg">
-          <source src="assets/tt_7315110126430539014.mp4" type="video/mp4">
-        </video>
-        <button class="unmute-btn" aria-label="Toggle sound">♪</button>
-      </div>
-      <div class="tt-meta"><span class="b">Sears × Nautica</span><span class="t italic">Retail</span></div>
-    </article>
   </div>
 </div>
-
-<!-- ═══════════════════════════ F divider ═══════════════════════════ -->
-<div class="f-divider" aria-hidden="true"><span class="f-icon">F</span></div>
 
 <!-- ═══════════════════════════ IV · BRAND WALL (luxury only) ═══════════════════════════ -->
 <section class="logos-block" aria-label="Brand partners">
@@ -808,7 +784,6 @@ footer .sm{
 
 <!-- ═══════════════════════════ V · AVAILABLE (call sheet) ═══════════════════════════ -->
 <section class="available" aria-label="Available">
-  <div class="sec-no italic">V</div>
   <div class="sec-head reveal">
     <div class="sec-tag">
       <span lang="es">Disponibilidad</span>
@@ -858,12 +833,8 @@ footer .sm{
   </div>
 </section>
 
-<!-- ═══════════════════════════ F divider ═══════════════════════════ -->
-<div class="f-divider" aria-hidden="true"><span class="f-icon">F</span></div>
-
 <!-- ═══════════════════════════ VI · THE MAN (profile) ═══════════════════════════ -->
 <section class="profile-feature" aria-label="The man">
-  <div class="sec-no italic">VI</div>
   <div class="sec-head reveal">
     <div class="sec-tag">
       <span lang="es">El artista</span>
@@ -904,8 +875,16 @@ footer .sm{
       <div class="pv">JPG · Rabanne · Carolina Herrera · Diesel</div>
     </div>
     <div class="prow">
+      <div class="pk"><span lang="es">Moda</span><span lang="en">Fashion</span></div>
+      <div class="pv">Diesel · Nautica</div>
+    </div>
+    <div class="prow">
       <div class="pk">Beauty</div>
-      <div class="pv">Kérastase · Head &amp; Shoulders · Nautica · Sears</div>
+      <div class="pv">Kérastase · Head &amp; Shoulders</div>
+    </div>
+    <div class="prow">
+      <div class="pk">Retail</div>
+      <div class="pv">Sears</div>
     </div>
     <div class="prow">
       <div class="pk">Management</div>
@@ -952,7 +931,6 @@ footer .sm{
 
 <!-- ═══════════════════════════ VIII · AUDIENCE (compact) ═══════════════════════════ -->
 <section class="aud-block" aria-label="Audience">
-  <div class="sec-no italic">VIII</div>
   <div class="sec-head reveal">
     <div class="sec-tag">
       <span lang="es">Audiencia</span>
@@ -998,7 +976,6 @@ footer .sm{
 
 <!-- ═══════════════════════════ IX · CTA ═══════════════════════════ -->
 <section class="cta-block" id="contact" aria-label="Contact">
-  <div class="f-bg italic" aria-hidden="true">F</div>
   <div class="inner">
     <h2 class="serif">
       <span lang="es"><em>Hablemos.</em></span>
