@@ -1143,6 +1143,55 @@ footer .sm{display:none
     });
   });
 
+  /* ═══ Editorial gallery auto-advance ═══ */
+  var gallery=document.querySelector('.gallery-scroll');
+  if(gallery){
+    var galleryImgs=gallery.querySelectorAll('.gallery-img');
+    var gIdx=0,gTimer=null,gUserActive=false,gUserResetTimer=null;
+    function gotoGalleryIdx(i){
+      gIdx=((i%galleryImgs.length)+galleryImgs.length)%galleryImgs.length;
+      var target=galleryImgs[gIdx];
+      gallery.scrollTo({
+        left:target.offsetLeft-(gallery.clientWidth-target.clientWidth)/2,
+        behavior:'smooth'
+      });
+    }
+    function startGalleryAuto(){
+      if(gTimer) clearInterval(gTimer);
+      gTimer=setInterval(function(){
+        if(!gUserActive) gotoGalleryIdx(gIdx+1);
+      },5500);
+    }
+    function pauseGalleryAuto(seconds){
+      gUserActive=true;
+      if(gUserResetTimer) clearTimeout(gUserResetTimer);
+      gUserResetTimer=setTimeout(function(){gUserActive=false;},seconds*1000);
+    }
+    gallery.addEventListener('touchstart',function(){pauseGalleryAuto(8);},{passive:true});
+    gallery.addEventListener('mousedown',function(){pauseGalleryAuto(8);});
+    var gScrollSync;
+    gallery.addEventListener('scroll',function(){
+      clearTimeout(gScrollSync);
+      gScrollSync=setTimeout(function(){
+        var center=gallery.scrollLeft+gallery.clientWidth/2;
+        var closest=0,minDist=Infinity;
+        galleryImgs.forEach(function(img,idx){
+          var imgCenter=img.offsetLeft+img.clientWidth/2;
+          var dist=Math.abs(center-imgCenter);
+          if(dist<minDist){minDist=dist;closest=idx;}
+        });
+        gIdx=closest;
+      },180);
+    },{passive:true});
+    var galleryObs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){startGalleryAuto();}
+        else if(gTimer){clearInterval(gTimer);gTimer=null;}
+      });
+    },{threshold:.25});
+    galleryObs.observe(gallery);
+  }
+
   /* ═══ iOS scroll wake ═══ */
   document.addEventListener('touchstart',function(){},{passive:true});
 
