@@ -241,21 +241,38 @@ section{position:relative}
 }
 .gallery-scroll::-webkit-scrollbar{display:none}
 .gallery-img{
-  flex:0 0 96%;aspect-ratio:4/5;
+  flex:0 0 82%;aspect-ratio:4/5;
   scroll-snap-align:center;
   background-size:cover;background-position:center;
   margin:0 2%;
   position:relative;
   filter:contrast(1.06) saturate(.92);
 }
-.gallery-img:first-child{margin-left:4%}
-.gallery-img:last-child{margin-right:4%}
+.gallery-img:first-child{margin-left:9%}
+.gallery-img:last-child{margin-right:9%}
 .gallery-num{
   position:absolute;top:18px;left:18px;
   font-family:'Butler','Bodoni Moda',serif;font-style:italic;font-weight:400;
   font-size:32px;color:var(--white);
   text-shadow:0 2px 16px rgba(0,0,0,.7);
   letter-spacing:-.02em;
+}
+.gallery-counter{
+  text-align:center;padding:14px 24px 4px;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.4em;text-transform:uppercase;
+  color:var(--text-muted);font-weight:500;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+}
+.gallery-counter .cur{
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;
+  font-size:13px;color:var(--gris);letter-spacing:.02em;
+  min-width:24px;text-align:right;
+}
+.gallery-counter .sep{width:24px;height:1px;background:var(--line-2)}
+.gallery-counter .total{
+  font-family:'Butler','Bodoni Moda',serif;font-style:italic;
+  font-size:13px;color:var(--text-muted);letter-spacing:.02em;
 }
 .gallery-credit{
   position:absolute;bottom:18px;right:18px;
@@ -689,6 +706,11 @@ footer .sm{display:none
       <div class="gallery-num italic">iii</div>
       <div class="gallery-credit">Portrait</div>
     </div>
+  </div>
+  <div class="gallery-counter" aria-hidden="true">
+    <span class="cur">i</span>
+    <span class="sep"></span>
+    <span class="total">iii</span>
   </div>
 </div>
 
@@ -1155,12 +1177,20 @@ footer .sm{display:none
         left:target.offsetLeft-(gallery.clientWidth-target.clientWidth)/2,
         behavior:'smooth'
       });
+      updateGalleryCounter();
     }
     function startGalleryAuto(){
       if(gTimer) clearInterval(gTimer);
       gTimer=setInterval(function(){
         if(!gUserActive) gotoGalleryIdx(gIdx+1);
-      },5500);
+      },3500);
+    }
+    function updateGalleryCounter(){
+      var counter=document.querySelector('.gallery-counter');
+      if(counter){
+        var roman=['i','ii','iii','iv','v','vi'];
+        counter.querySelector('.cur').textContent=roman[gIdx]||'i';
+      }
     }
     function pauseGalleryAuto(seconds){
       gUserActive=true;
@@ -1181,6 +1211,7 @@ footer .sm{display:none
           if(dist<minDist){minDist=dist;closest=idx;}
         });
         gIdx=closest;
+        updateGalleryCounter();
       },180);
     },{passive:true});
     var galleryObs=new IntersectionObserver(function(entries){
