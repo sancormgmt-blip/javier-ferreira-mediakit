@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f0c0a">
 <title>Javier Ferreira — Brand Media Kit 2026</title>
-<meta name="description" content="Javier Ferreira — Editorial talent. Wears Rabanne · Jean Paul Gaultier · Carolina Herrera · Diesel. Available for Paris Fashion Week & Bogotá Fashion Week 2026.">
+<meta name="description" content="Javier Ferreira — Se abren las puertas del cielo. Wears Jean Paul Gaultier · Rabanne · Carolina Herrera · Diesel. Available for Paris Fashion Week & Bogotá Fashion Week 2026. Chimbita Records.">
 <meta property="og:title" content="Javier Ferreira — Brand Media Kit 2026">
-<meta property="og:description" content="Wears Rabanne · JPG · Carolina Herrera · Diesel. 3.9M-strong digital audience meets fashion's front row.">
+<meta property="og:description" content="Se abren las puertas del cielo. Wears Jean Paul Gaultier · Rabanne · Carolina Herrera · Diesel.">
 <meta property="og:type" content="profile">
 <meta property="og:image" content="assets/foto1.jpg">
 <meta property="og:image:width" content="800">
@@ -19,26 +19,29 @@
 <link rel="preload" as="video" href="assets/hero_jpg.mp4" type="video/mp4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
-  /* Warm editorial black */
-  --bg:#0f0c0a;
-  --bg-2:#13100c;
-  --surface:#16110e;
-  --line:rgba(255,253,247,.08);
-  --line-2:rgba(255,253,247,.16);
-  --text:#e8e6e0;
-  --text-soft:#a8a59c;
+  /* Brand book Javier Ferreira (oficial) */
+  --negro:#1C1C1C;
+  --bronce:#383837;
+  --gris:#B9BFC4;
+  --blanco:#FFFFF5;
+  /* Surfaces derivadas */
+  --bg:#1C1C1C;
+  --bg-2:#202020;
+  --surface:#262625;
+  --line:rgba(185,191,196,.10);
+  --line-2:rgba(185,191,196,.22);
+  --text:#FFFFF5;
+  --text-soft:#B9BFC4;
   --text-muted:#6e6a60;
-  --white:#fffff5;
-  --gris:#c4bdb0;
-  --rojo:#c8332e;
+  --white:#FFFFF5;
 }
 html{scroll-behavior:smooth;background:var(--bg);-webkit-text-size-adjust:100%}
 body{
-  font-family:'Inter',system-ui,-apple-system,Helvetica,Arial,sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   background:var(--bg);color:var(--text);
   line-height:1.6;
   -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
@@ -62,8 +65,13 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
 [data-lang="en"] [lang="es"]{display:none!important}
 
 /* Type utilities */
-.serif{font-family:'Playfair Display',Georgia,serif}
+.serif{font-family:'Bodoni Moda',Georgia,'Times New Roman',serif;font-feature-settings:'kern','liga'}
 .italic{font-style:italic}
+/* Bodoni Moda optical size axis: bigger size = display variant */
+h1.serif,.cta-h{font-variation-settings:'opsz' 96}
+h2,.sec-head h2{font-variation-settings:'opsz' 72}
+.bio-text,.av-when,.av-what{font-variation-settings:'opsz' 36}
+.tt-meta .b,.idx-cell .n,.cta-card .name,.gen .n{font-variation-settings:'opsz' 24}
 
 /* ═══ Lang toggle (square, editorial) ═══ */
 .lang-toggle{
@@ -82,7 +90,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
 .f-mark{display:inline-flex;align-items:center;justify-content:center}
 .f-mark svg{display:block}
 .f-watermark{
-  position:absolute;font-family:'Playfair Display',serif;font-weight:900;
+  position:absolute;font-family:'Bodoni Moda',serif;font-weight:900;
   color:rgba(255,253,247,.025);
   font-size:clamp(280px,60vw,560px);line-height:.8;letter-spacing:-.05em;
   z-index:1;pointer-events:none;user-select:none;
@@ -98,7 +106,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
 }
 .f-divider::after{background:linear-gradient(90deg,var(--line-2),transparent)}
 .f-divider .f-icon{
-  font-family:'Playfair Display',serif;font-weight:700;font-style:italic;
+  font-family:'Bodoni Moda',serif;font-weight:700;font-style:italic;
   font-size:32px;color:var(--gris);margin:0 24px;line-height:1;opacity:.55;
 }
 
@@ -127,7 +135,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
 .hero-watermark{
   position:absolute;z-index:2;pointer-events:none;
   top:18%;right:-8%;
-  font-family:'Playfair Display',serif;font-weight:900;font-style:italic;
+  font-family:'Bodoni Moda',serif;font-weight:900;font-style:italic;
   font-size:clamp(220px,55vw,460px);line-height:.8;
   color:rgba(255,253,247,.04);
   letter-spacing:-.04em;
@@ -138,7 +146,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
   padding-bottom:max(44px,calc(env(safe-area-inset-bottom) + 32px));
 }
 .hero-issue{
-  font-family:'Inter',sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:9.5px;letter-spacing:.4em;text-transform:uppercase;
   color:var(--gris);font-weight:500;margin-bottom:18px;
   display:flex;justify-content:space-between;align-items:center;
@@ -147,27 +155,38 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
 .hero-issue .left{display:flex;align-items:center;gap:12px}
 .hero-issue .left::before{content:'';width:24px;height:1px;background:var(--gris)}
 .hero h1{
-  font-family:'Playfair Display',serif;
-  font-weight:800;font-size:clamp(56px,17vw,128px);
-  line-height:.86;letter-spacing:-.025em;color:var(--white);
+  font-family:'Bodoni Moda',Georgia,serif;
+  font-variation-settings:'opsz' 96;
+  font-weight:700;font-size:clamp(56px,17vw,128px);
+  line-height:.88;letter-spacing:-.015em;color:var(--white);
   margin-bottom:22px;text-transform:uppercase;
 }
 .hero h1 em{
-  font-style:italic;font-weight:400;color:var(--gris);
-  display:block;text-transform:none;letter-spacing:-.02em;
+  font-style:italic;font-weight:500;color:var(--gris);
+  display:block;text-transform:none;letter-spacing:-.01em;
+  font-variation-settings:'opsz' 96;
 }
 .hero-hook{
-  font-family:'Inter',sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:11px;letter-spacing:.28em;text-transform:uppercase;
   color:var(--gris);font-weight:500;margin-bottom:24px;
   line-height:1.7;max-width:520px;
 }
 .hero-hook strong{color:var(--white);font-weight:600}
 .hero-tagline{
-  font-family:'Playfair Display',serif;font-style:italic;
+  font-family:'Bodoni Moda',Georgia,serif;font-style:italic;
   font-size:clamp(15px,4.4vw,21px);color:var(--text);
   font-weight:400;letter-spacing:.005em;line-height:1.45;
-  margin-bottom:28px;max-width:540px;
+  margin-bottom:24px;max-width:540px;
+}
+.hero-keywords{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;
+}
+.hero-keywords span{
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:9px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gris);font-weight:500;
+  padding:6px 14px;border:1px solid var(--line-2);
 }
 .hero-meta{
   display:flex;gap:20px;flex-wrap:wrap;
@@ -181,7 +200,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
 .scroll-cue{
   position:absolute;bottom:max(16px,env(safe-area-inset-bottom));left:50%;
   transform:translateX(-50%);z-index:4;
-  font-family:'Playfair Display',serif;font-style:italic;
+  font-family:'Bodoni Moda',serif;font-style:italic;
   font-size:11px;letter-spacing:.18em;
   color:var(--text-muted);display:flex;flex-direction:column;align-items:center;gap:10px;
   animation:bounce 2.4s ease-in-out infinite;pointer-events:none;
@@ -193,26 +212,26 @@ button{font-family:inherit;cursor:pointer;background:none;border:none;color:inhe
 section{position:relative}
 .sec{padding:84px 24px;max-width:1200px;margin:0 auto;position:relative}
 .sec-no{
-  font-family:'Playfair Display',serif;font-weight:400;font-style:italic;
+  font-family:'Bodoni Moda',serif;font-weight:400;font-style:italic;
   font-size:14px;color:var(--gris);margin-bottom:8px;letter-spacing:.04em;opacity:.7;
 }
 .sec-head{margin-bottom:36px;position:relative}
 .sec-tag{
-  font-family:'Inter',sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:9.5px;letter-spacing:.36em;text-transform:uppercase;
   color:var(--gris);font-weight:500;margin-bottom:18px;
   display:flex;align-items:center;gap:12px;
 }
 .sec-tag::before{content:'';width:18px;height:1px;background:var(--gris)}
 .sec-head h2{
-  font-family:'Playfair Display',serif;
+  font-family:'Bodoni Moda',serif;
   font-size:clamp(32px,9vw,60px);font-weight:800;
   color:var(--white);line-height:1.0;letter-spacing:-.025em;
   margin-bottom:16px;text-transform:uppercase;
 }
 .sec-head h2 em{font-style:italic;color:var(--gris);font-weight:400;text-transform:none}
 .sec-head p{
-  font-family:'Playfair Display',serif;font-style:italic;
+  font-family:'Bodoni Moda',serif;font-style:italic;
   font-size:15.5px;color:var(--text-soft);line-height:1.7;
   max-width:580px;font-weight:400;
 }
@@ -239,14 +258,14 @@ section{position:relative}
 .gallery-img:last-child{margin-right:4%}
 .gallery-num{
   position:absolute;top:18px;left:18px;
-  font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
+  font-family:'Bodoni Moda',serif;font-style:italic;font-weight:400;
   font-size:32px;color:var(--white);
   text-shadow:0 2px 16px rgba(0,0,0,.7);
   letter-spacing:-.02em;
 }
 .gallery-credit{
   position:absolute;bottom:18px;right:18px;
-  font-family:'Inter',sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;
   color:var(--white);font-weight:500;opacity:.85;
   text-shadow:0 2px 12px rgba(0,0,0,.7);
@@ -281,10 +300,10 @@ section{position:relative}
 }
 .tt-meta .b{
   font-size:18px;color:var(--white);font-weight:700;
-  font-family:'Playfair Display',serif;display:block;letter-spacing:-.01em;
+  font-family:'Bodoni Moda',serif;display:block;letter-spacing:-.01em;
 }
 .tt-meta .t{
-  font-family:'Playfair Display',serif;font-style:italic;
+  font-family:'Bodoni Moda',serif;font-style:italic;
   font-size:12px;color:var(--gris);font-weight:400;margin-top:2px;display:block;
 }
 .unmute-btn{
@@ -305,7 +324,7 @@ section{position:relative}
   position:relative;overflow:hidden;
 }
 .tier-label{
-  text-align:center;font-family:'Playfair Display',serif;font-style:italic;
+  text-align:center;font-family:'Bodoni Moda',serif;font-style:italic;
   font-size:14px;color:var(--text-muted);margin-bottom:42px;font-weight:400;
 }
 .tier-label::before,.tier-label::after{
@@ -332,7 +351,7 @@ section{position:relative}
   position:relative;
 }
 .case-study .quote{
-  font-family:'Playfair Display',serif;font-weight:400;font-style:italic;
+  font-family:'Bodoni Moda',serif;font-weight:400;font-style:italic;
   font-size:clamp(20px,5vw,30px);line-height:1.4;color:var(--white);
   letter-spacing:-.01em;margin-bottom:24px;
 }
@@ -341,7 +360,7 @@ section{position:relative}
   display:block;line-height:.5;margin-bottom:8px;font-weight:700;
 }
 .case-study .attribution{
-  font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.32em;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.32em;
   text-transform:uppercase;color:var(--text-muted);font-weight:500;
 }
 
@@ -357,17 +376,17 @@ section{position:relative}
   align-items:start;
 }
 .available-row .av-label{
-  font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:.32em;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:9.5px;letter-spacing:.32em;
   text-transform:uppercase;color:var(--text-muted);font-weight:500;
   padding-top:6px;
 }
 .available-row .av-content{
-  font-family:'Playfair Display',serif;font-weight:400;
+  font-family:'Bodoni Moda',serif;font-weight:400;
   font-size:18px;color:var(--white);line-height:1.45;letter-spacing:-.005em;
 }
 .available-row .av-content em{color:var(--gris);font-style:italic;font-weight:400}
 .available-row .av-content small{
-  display:block;font-family:'Inter',sans-serif;font-style:normal;
+  display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-style:normal;
   font-size:11.5px;color:var(--text-soft);font-weight:400;line-height:1.6;
   margin-top:6px;letter-spacing:.01em;
 }
@@ -381,17 +400,17 @@ section{position:relative}
   align-items:baseline;
 }
 .prow .pk{
-  font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:.32em;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:9.5px;letter-spacing:.32em;
   text-transform:uppercase;color:var(--text-muted);font-weight:500;
 }
 .prow .pv{
-  font-family:'Playfair Display',serif;font-weight:400;
+  font-family:'Bodoni Moda',serif;font-weight:400;
   font-size:16px;color:var(--text);line-height:1.5;letter-spacing:-.005em;
 }
 .prow .pv.hl{color:var(--white)}
 .prow .pv em{color:var(--gris);font-style:italic}
 .profile-bio{
-  font-family:'Playfair Display',serif;font-weight:400;font-style:italic;
+  font-family:'Bodoni Moda',serif;font-weight:400;font-style:italic;
   font-size:clamp(16px,4vw,20px);line-height:1.7;color:var(--text-soft);
   max-width:680px;margin:24px 0 8px;letter-spacing:-.005em;
 }
@@ -403,7 +422,7 @@ section{position:relative}
 }
 .index-inner{max-width:1200px;margin:0 auto}
 .index-head{
-  font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
+  font-family:'Bodoni Moda',serif;font-style:italic;font-weight:400;
   font-size:13px;color:var(--text-muted);text-align:center;margin-bottom:28px;
 }
 .index-grid{
@@ -415,17 +434,17 @@ section{position:relative}
   background:#0a0806;padding:24px 16px;text-align:center;
 }
 .idx-cell .n{
-  font-family:'Playfair Display',serif;font-weight:700;
+  font-family:'Bodoni Moda',serif;font-weight:700;
   font-size:clamp(24px,7vw,34px);color:var(--white);line-height:1;
   letter-spacing:-.02em;
 }
 .idx-cell .l{
-  font-family:'Inter',sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;
   color:var(--text-muted);margin-top:10px;font-weight:500;
 }
 .idx-source{
-  text-align:center;font-family:'Playfair Display',serif;font-style:italic;
+  text-align:center;font-family:'Bodoni Moda',serif;font-style:italic;
   font-size:10.5px;color:var(--text-muted);margin-top:18px;font-weight:400;
 }
 
@@ -434,21 +453,21 @@ section{position:relative}
 .aud-row{display:grid;grid-template-columns:1fr;gap:0;margin-top:24px;border-top:1px solid var(--line)}
 .aud-card{padding:22px 0;border-bottom:1px solid var(--line)}
 .aud-card h3{
-  font-family:'Inter',sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;
   color:var(--gris);font-weight:500;margin-bottom:16px;
 }
 .bar{display:flex;align-items:center;gap:14px;margin-bottom:11px}
 .bar:last-child{margin-bottom:0}
-.bar .bl{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--text-soft);min-width:96px;text-align:right;font-weight:400}
+.bar .bl{font-family:'Bodoni Moda',serif;font-style:italic;font-size:13px;color:var(--text-soft);min-width:96px;text-align:right;font-weight:400}
 .bar .bt{flex:1;height:1px;background:rgba(255,253,247,.08);overflow:hidden}
 .bar .bf{height:100%;background:linear-gradient(90deg,var(--gris),#e8e6e0);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
-.bar .bf.hl{background:linear-gradient(90deg,var(--rojo),#e8716c)}
-.bar .bp{font-family:'Inter',sans-serif;font-size:11px;color:var(--text);font-weight:600;min-width:34px;letter-spacing:.04em}
+.bar .bf.hl{background:linear-gradient(90deg,var(--bronce),var(--gris))}
+.bar .bp{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;color:var(--text);font-weight:600;min-width:34px;letter-spacing:.04em}
 .gender-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
 .gen{text-align:center}
-.gen .n{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--white);line-height:1}
-.gen .l{font-family:'Inter',sans-serif;font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-muted);margin-top:8px;font-weight:500}
+.gen .n{font-family:'Bodoni Moda',serif;font-size:30px;font-weight:700;color:var(--white);line-height:1}
+.gen .l{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-muted);margin-top:8px;font-weight:500}
 
 /* ═══ CTA / CONTACT ═══ */
 .cta-block{
@@ -458,20 +477,20 @@ section{position:relative}
 }
 .cta-block .f-bg{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  font-family:'Playfair Display',serif;font-weight:900;font-style:italic;
+  font-family:'Bodoni Moda',serif;font-weight:900;font-style:italic;
   font-size:clamp(280px,55vw,500px);line-height:.85;
   color:rgba(255,253,247,.022);letter-spacing:-.06em;
   pointer-events:none;
 }
 .cta-block .inner{position:relative;z-index:2}
 .cta-block h2{
-  font-family:'Playfair Display',serif;
+  font-family:'Bodoni Moda',serif;
   font-size:clamp(36px,10vw,72px);font-weight:800;color:var(--white);
   letter-spacing:-.025em;margin-bottom:18px;line-height:1.0;text-transform:uppercase;
 }
 .cta-block h2 em{font-style:italic;color:var(--gris);font-weight:400;text-transform:none}
 .cta-block .lead{
-  font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
+  font-family:'Bodoni Moda',serif;font-style:italic;font-weight:400;
   font-size:16px;color:var(--text-soft);max-width:520px;margin:0 auto 36px;line-height:1.6;
 }
 .cta-card{
@@ -481,29 +500,29 @@ section{position:relative}
   background:transparent;min-width:280px;
 }
 .cta-card .role{
-  font-family:'Inter',sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:9px;letter-spacing:.36em;text-transform:uppercase;
   color:var(--gris);margin-bottom:12px;font-weight:500;
 }
-.cta-card .name{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:8px;letter-spacing:-.01em}
+.cta-card .name{font-family:'Bodoni Moda',serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:8px;letter-spacing:-.01em}
 .cta-card .title-line{
-  font-family:'Playfair Display',serif;font-style:italic;
+  font-family:'Bodoni Moda',serif;font-style:italic;
   font-size:13.5px;color:var(--text-soft);font-weight:400;margin-bottom:20px;
 }
 .cta-card .email{
-  display:block;font-family:'Inter',sans-serif;font-size:14.5px;color:var(--white);
+  display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14.5px;color:var(--white);
   letter-spacing:.01em;margin-top:18px;
   border-top:1px solid var(--line);padding-top:18px;font-weight:500;
 }
 .cta-card .email:hover{color:var(--gris)}
 .cta-card .ig{
-  display:block;font-family:'Inter',sans-serif;font-size:11.5px;color:var(--text-soft);
+  display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11.5px;color:var(--text-soft);
   letter-spacing:.04em;margin-top:8px;
 }
 .cta-card .ig:hover{color:var(--white)}
 .cta-tags{display:flex;gap:0;justify-content:center;flex-wrap:wrap;margin-top:32px}
 .cta-tag{
-  font-family:'Inter',sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-muted);
   padding:7px 18px;border:1px solid var(--line);font-weight:500;
   border-right:none;
@@ -517,17 +536,17 @@ footer{
   background:#0a0806;position:relative;
 }
 footer .f-seal{
-  font-family:'Playfair Display',serif;font-style:italic;font-weight:700;
+  font-family:'Bodoni Moda',serif;font-style:italic;font-weight:700;
   font-size:24px;color:var(--gris);opacity:.4;margin-bottom:14px;
   display:inline-block;line-height:1;
 }
 footer .legal{
-  font-family:'Inter',sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;
   color:var(--text-muted);font-weight:500;line-height:2
 }
 footer .sm{
-  font-family:'Inter',sans-serif;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size:9px;letter-spacing:.32em;color:var(--gris);font-weight:600;
   margin-bottom:6px;text-transform:uppercase
 }
@@ -577,8 +596,8 @@ footer .sm{
 .print-only{display:none}
 .pdf-qr{display:flex;align-items:center;gap:18px;justify-content:center;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
 .pdf-qr img{width:96px;height:96px;background:#fff;padding:6px}
-.pdf-qr .qr-text{text-align:left;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--text-muted);line-height:1.7}
-.pdf-qr .qr-text strong{display:block;color:var(--text);font-weight:600;margin-bottom:5px;font-size:10px;font-family:'Playfair Display',serif;font-style:italic;letter-spacing:.04em;text-transform:none}
+.pdf-qr .qr-text{text-align:left;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--text-muted);line-height:1.7}
+.pdf-qr .qr-text strong{display:block;color:var(--text);font-weight:600;margin-bottom:5px;font-size:10px;font-family:'Bodoni Moda',serif;font-style:italic;letter-spacing:.04em;text-transform:none}
 @media print{
   body::before{display:none}
   .lang-toggle,.scroll-cue,.tt-carousel,.hero-video,.unmute-btn{display:none}
@@ -616,9 +635,15 @@ footer .sm{
       <strong>Wears</strong> Jean Paul Gaultier · Rabanne · Carolina Herrera · Diesel
     </div>
     <p class="hero-tagline">
-      <span lang="es">Un audiencia de 3.9M se cruza con la front row.</span>
-      <span lang="en">A 3.9M-strong digital audience meets the front row.</span>
+      <span lang="es">Se abren las puertas del cielo.</span>
+      <span lang="en">The gates of heaven open.</span>
     </p>
+    <div class="hero-keywords">
+      <span><span lang="es">Sensualidad</span><span lang="en">Sensuality</span></span>
+      <span><span lang="es">Elegante</span><span lang="en">Elegance</span></span>
+      <span><span lang="es">Provocador</span><span lang="en">Provocateur</span></span>
+      <span><span lang="es">Belleza</span><span lang="en">Beauty</span></span>
+    </div>
     <div class="hero-meta">
       <span>Medellín</span>
       <span lang="es">1.95 m · 6'4"</span>
@@ -981,7 +1006,7 @@ footer .sm{
       </div>
       <span class="email">sancor.mgmt@gmail.com</span>
     </a>
-    <div style="margin-top:14px"><a href="https://instagram.com/javiercferreira" target="_blank" rel="noopener" class="cta-card" style="padding:14px 24px;display:inline-block;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris);font-weight:500">@javiercferreira · Instagram</a></div>
+    <div style="margin-top:14px"><a href="https://instagram.com/javiercferreira" target="_blank" rel="noopener" class="cta-card" style="padding:14px 24px;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gris);font-weight:500">@javiercferreira · Instagram</a></div>
     <div class="cta-tags">
       <span class="cta-tag"><span lang="es">By referral</span><span lang="en">By referral</span></span>
       <span class="cta-tag"><span lang="es">Bespoke partnerships</span><span lang="en">Bespoke partnerships</span></span>
